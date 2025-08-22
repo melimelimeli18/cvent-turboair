@@ -207,73 +207,31 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/666e21d1-98ea-4bda-b08a-e2ec68ad33e4.png" 
-                  alt="Pabrik - Factory building with industrial smokestacks"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">🏭</div>
               <h3 className="text-lg font-medium text-neutral-900">Pabrik</h3>
             </div>
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/59106a77-c789-49dd-a5b3-e5c60c388fa9.png" 
-                  alt="Gudang - Warehouse with storage boxes and forklift"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">📦</div>
               <h3 className="text-lg font-medium text-neutral-900">Gudang</h3>
             </div>
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/894d403d-0b0c-44f2-8518-675a10fa70bc.png" 
-                  alt="Gedung Olahraga - Sports facility with gym equipment"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">🏟️</div>
               <h3 className="text-lg font-medium text-neutral-900">Gedung Olahraga</h3>
             </div>
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/3a3cfdbf-2341-4914-b66e-fcae508f5e51.png" 
-                  alt="Rumah Tinggal - Residential house with garden"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">🏠</div>
               <h3 className="text-lg font-medium text-neutral-900">Rumah Tinggal</h3>
             </div>
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/0ff74490-381f-42a7-a241-0f46d3671935.png" 
-                  alt="Restoran - Restaurant with dining area and outdoor seating"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">🍴</div>
               <h3 className="text-lg font-medium text-neutral-900">Restoran</h3>
             </div>
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/da253461-981f-45d3-af72-73c946426d3e.png" 
-                  alt="Perkantoran - Multi-story office building"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">🏢</div>
               <h3 className="text-lg font-medium text-neutral-900">Perkantoran</h3>
             </div>
             <div className="text-center p-6 rounded-lg hover:bg-neutral-50 hover:shadow-lg transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/1fe6f0c7-bf1e-428e-bec4-e1f9b26e234a.png" 
-                  alt="Tempat Ibadah - Mosque with golden domes and minarets"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="text-6xl mb-4">🕌</div>
               <h3 className="text-lg font-medium text-neutral-900">Tempat Ibadah</h3>
             </div>
           </div>
