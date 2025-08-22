@@ -1,324 +1,269 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Download, MessageCircle, Phone } from "lucide-react";
+import { Wind, Wrench } from "lucide-react";
 
 export default function Produk() {
-  const productSpecs = [
+  const products = [
     {
-      model: '14"',
-      material: 'Aluminium',
-      diameter: '35.6 cm',
-      base: '40x40 cm - Galvanis',
-      capacity: '800-1,200',
-      weight: '12 kg',
-      warranty: '3 Tahun'
+      id: 'c-45',
+      name: 'C Vent Type C-45',
+      size: '18"',
+      capacity: '1,200 m³/jam',
+      description: 'Ideal untuk ruangan kecil hingga menengah'
     },
     {
-      model: '20"',
-      material: 'Aluminium',
-      diameter: '50.8 cm',
-      base: '50x50 cm - Galvanis',
-      capacity: '1,500-2,200',
-      weight: '18 kg',
-      warranty: '3 Tahun'
+      id: 'c-60',
+      name: 'C Vent Type C-60',
+      size: '24"',
+      capacity: '2,200 m³/jam',
+      description: 'Cocok untuk ruangan menengah dan perkantoran'
     },
     {
-      model: '24"',
-      material: 'Aluminium',
-      diameter: '61.0 cm',
-      base: '60x60 cm - Galvanis',
-      capacity: '2,200-3,000',
-      weight: '25 kg',
-      warranty: '3 Tahun'
+      id: 'c-75',
+      name: 'C Vent Type C-75',
+      size: '30"',
+      capacity: '3,500 m³/jam',
+      description: 'Optimal untuk gedung besar dan industri ringan'
     },
     {
-      model: '30"',
-      material: 'Aluminium',
-      diameter: '76.2 cm',
-      base: '80x80 cm - Galvanis',
-      capacity: '3,500-4,500',
-      weight: '35 kg',
-      warranty: '3 Tahun'
-    }
-  ];
-
-  const stainlessSpecs = [
-    {
-      model: '14"',
-      material: 'Stainless Steel',
-      diameter: '35.6 cm',
-      base: '40x40 cm - Stainless',
-      capacity: '800-1,200',
-      weight: '15 kg',
-      warranty: '5 Tahun'
+      id: 'c-90',
+      name: 'C Vent Type C-90',
+      size: '36"',
+      capacity: '4,800 m³/jam',
+      description: 'Untuk gudang besar dan fasilitas industri'
     },
     {
-      model: '20"',
-      material: 'Stainless Steel',
-      diameter: '50.8 cm',
-      base: '50x50 cm - Stainless',
-      capacity: '1,500-2,200',
-      weight: '22 kg',
-      warranty: '5 Tahun'
-    },
-    {
-      model: '24"',
-      material: 'Stainless Steel',
-      diameter: '61.0 cm',
-      base: '60x60 cm - Stainless',
-      capacity: '2,200-3,000',
-      weight: '28 kg',
-      warranty: '5 Tahun'
-    },
-    {
-      model: '30"',
-      material: 'Stainless Steel',
-      diameter: '76.2 cm',
-      base: '80x80 cm - Stainless',
-      capacity: '3,500-4,500',
-      weight: '42 kg',
-      warranty: '5 Tahun'
+      id: 'c-105',
+      name: 'C Vent Type C-105',
+      size: '42"',
+      capacity: '6,500 m³/jam',
+      description: 'Kapasitas maksimal untuk industri berat'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <div className="min-h-screen bg-white">
+      <Navigation isDark={false} />
 
-      {/* Hero Section */}
-      <section className="py-20 px-6 bg-primary text-primary-foreground">
+      {/* Header Section */}
+      <section className="py-20 px-6 bg-neutral-50">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-6xl font-light mb-6">
-            Lini Produk <span className="font-bold">C Vent</span>
+          <h1 className="text-4xl md:text-6xl font-light text-neutral-900 mb-6">
+            Produk Turbine Ventilator <span className="font-semibold text-primary">C Vent</span>
           </h1>
-          <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto">
-            Turbine Ventilator berkualitas tinggi dengan berbagai pilihan ukuran dan material
+          <p className="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+            C Vent tersedia dalam berbagai ukuran dan material, dibuat dari aluminium dan stainless steel berkualitas tinggi dengan bearing Jepang presisi. Semua produk didesain khusus untuk iklim tropis Indonesia, tahan lama, bebas listrik, dan bergaransi resmi.
           </p>
         </div>
       </section>
 
-      {/* Product Introduction */}
-      <section className="py-20 px-6 bg-background">
+      {/* Products Grid */}
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-8">
-              Turbine Ventilator <span className="font-semibold">C Vent</span>
+            <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-6">
+              Pilihan Ukuran C Vent
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Lini lengkap Turbine Ventilator C Vent tersedia dalam 4 ukuran standar: 14", 20", 24", dan 30" 
-              dengan pilihan material aluminium premium dan stainless steel marine grade. Setiap model dirancang 
-              untuk memberikan performa optimal dengan efisiensi maksimal.
+            <p className="text-lg text-neutral-600">
+              Tersedia 5 ukuran standar untuk berbagai kebutuhan bangunan
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center p-6 bg-muted/30 rounded-lg">
-              <div className="text-3xl font-bold text-primary mb-2">4</div>
-              <p className="text-muted-foreground">Ukuran Tersedia</p>
-            </div>
-            <div className="text-center p-6 bg-muted/30 rounded-lg">
-              <div className="text-3xl font-bold text-primary mb-2">2</div>
-              <p className="text-muted-foreground">Pilihan Material</p>
-            </div>
-            <div className="text-center p-6 bg-muted/30 rounded-lg">
-              <div className="text-3xl font-bold text-primary mb-2">5</div>
-              <p className="text-muted-foreground">Tahun Garansi</p>
-            </div>
-            <div className="text-center p-6 bg-muted/30 rounded-lg">
-              <div className="text-3xl font-bold text-primary mb-2">28+</div>
-              <p className="text-muted-foreground">Tahun Terpercaya</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product) => (
+              <div key={product.id} className="group">
+                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                    <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center text-neutral-500">
+                        <Wind className="w-16 h-16 mb-4 mx-auto" />
+                        <p className="text-sm font-medium">{product.name}</p>
+                        <p className="text-xs">({product.size})</p>
+                      </div>
+                    </div>
+                  </div>
+                  <CardContent className="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                      <h3 className="text-xl font-semibold text-neutral-900 mb-2 transition-colors duration-300 group-hover:text-primary">
+                        {product.name}
+                      </h3>
+                      <div className="text-lg font-medium text-primary mb-2">
+                        Kapasitas: {product.capacity}
+                      </div>
+                      <p className="text-neutral-600 mb-4 leading-relaxed text-sm">
+                        {product.description}
+                      </p>
+                    </div>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    >
+                      Lihat Detail
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Aluminium Specifications */}
-      <section className="py-20 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              Seri <span className="font-semibold">Aluminium</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Material aluminium berkualitas tinggi dengan perlindungan korosi optimal
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full bg-card rounded-lg shadow-lg overflow-hidden">
-              <thead className="bg-primary text-primary-foreground">
-                <tr>
-                  <th className="px-6 py-4 text-left">Model</th>
-                  <th className="px-6 py-4 text-left">Material</th>
-                  <th className="px-6 py-4 text-left">Diameter Kubah</th>
-                  <th className="px-6 py-4 text-left">Base (ukuran & bahan)</th>
-                  <th className="px-6 py-4 text-left">Kapasitas (m³/jam)</th>
-                  <th className="px-6 py-4 text-left">Berat</th>
-                  <th className="px-6 py-4 text-left">Garansi</th>
-                </tr>
-              </thead>
-              <tbody>
-                {productSpecs.map((spec, index) => (
-                  <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
-                    <td className="px-6 py-4 font-semibold text-primary">{spec.model}</td>
-                    <td className="px-6 py-4">{spec.material}</td>
-                    <td className="px-6 py-4">{spec.diameter}</td>
-                    <td className="px-6 py-4">{spec.base}</td>
-                    <td className="px-6 py-4">{spec.capacity}</td>
-                    <td className="px-6 py-4">{spec.weight}</td>
-                    <td className="px-6 py-4">
-                      <Badge variant="secondary">{spec.warranty}</Badge>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Stainless Steel Specifications */}
-      <section className="py-20 px-6 bg-background">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              Seri <span className="font-semibold">Stainless Steel</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Material stainless steel marine grade untuk lingkungan ekstrem dan industri berat
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full bg-card rounded-lg shadow-lg overflow-hidden">
-              <thead className="bg-primary text-primary-foreground">
-                <tr>
-                  <th className="px-6 py-4 text-left">Model</th>
-                  <th className="px-6 py-4 text-left">Material</th>
-                  <th className="px-6 py-4 text-left">Diameter Kubah</th>
-                  <th className="px-6 py-4 text-left">Base (ukuran & bahan)</th>
-                  <th className="px-6 py-4 text-left">Kapasitas (m³/jam)</th>
-                  <th className="px-6 py-4 text-left">Berat</th>
-                  <th className="px-6 py-4 text-left">Garansi</th>
-                </tr>
-              </thead>
-              <tbody>
-                {stainlessSpecs.map((spec, index) => (
-                  <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
-                    <td className="px-6 py-4 font-semibold text-primary">{spec.model}</td>
-                    <td className="px-6 py-4">{spec.material}</td>
-                    <td className="px-6 py-4">{spec.diameter}</td>
-                    <td className="px-6 py-4">{spec.base}</td>
-                    <td className="px-6 py-4">{spec.capacity}</td>
-                    <td className="px-6 py-4">{spec.weight}</td>
-                    <td className="px-6 py-4">
-                      <Badge className="bg-accent text-accent-foreground">{spec.warranty}</Badge>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Accessories & Components */}
-      <section className="py-20 px-6 bg-muted/30">
+      {/* Accessories & Spareparts */}
+      <section className="py-20 px-6 bg-neutral-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6">
-              Komponen & <span className="font-semibold">Aksesoris</span>
+            <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-6">
+              Aksesoris & Sparepart
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Perlengkapan tambahan untuk instalasi yang optimal dan aman
+            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              Komponen pendukung dan sparepart berkualitas untuk instalasi dan perawatan C Vent
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Accessories Card */}
+            <div className="group">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
+                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-neutral-500">
+                      <Wrench className="w-16 h-16 mb-4 mx-auto" />
+                      <p className="text-sm font-medium">Aksesoris Instalasi</p>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
+                      Aksesoris Instalasi
+                    </h3>
+                    <ul className="text-neutral-600 mb-4 leading-relaxed text-sm space-y-1">
+                      <li>• Base ridge/slope/curb</li>
+                      <li>• Flashing waterproofing</li>
+                      <li>• Jaring anti serangga</li>
+                      <li>• Ducting connector</li>
+                    </ul>
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    Lihat Detail
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Spareparts Card */}
+            <div className="group">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
+                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-neutral-500">
+                      <div className="text-6xl mb-2">🔧</div>
+                      <p className="text-sm font-medium">Sparepart & Service</p>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
+                      Sparepart & Service
+                    </h3>
+                    <ul className="text-neutral-600 mb-4 leading-relaxed text-sm space-y-1">
+                      <li>• Bearing Jepang original</li>
+                      <li>• Baling-baling presisi</li>
+                      <li>• Crown & body replacement</li>
+                      <li>• Service & maintenance</li>
+                    </ul>
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    Lihat Detail
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-6">
+              Keunggulan Produk C Vent
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="p-6 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-lg">Base Plate</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Basis mounting berkualitas dengan material galvanis atau stainless
-                </p>
-                <Badge variant="outline">Wajib</Badge>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">🇯🇵</div>
+              </div>
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Bearing Jepang</h3>
+              <p className="text-neutral-600 text-sm">Bearing presisi dari Jepang untuk durabilitas maksimal</p>
+            </div>
 
-            <Card className="p-6 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-lg">Flashing Kit</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Pelindung kebocoran antara atap dan base plate
-                </p>
-                <Badge variant="outline">Opsional</Badge>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">🌡️</div>
+              </div>
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Iklim Tropis</h3>
+              <p className="text-neutral-600 text-sm">Didesain khusus untuk cuaca Indonesia</p>
+            </div>
 
-            <Card className="p-6 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-lg">Jaring Anti-Serangga</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Mencegah masuknya serangga dan debris dari luar
-                </p>
-                <Badge variant="outline">Direkomendasikan</Badge>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">🛡️</div>
+              </div>
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Material Premium</h3>
+              <p className="text-neutral-600 text-sm">Aluminium & stainless steel grade industri</p>
+            </div>
 
-            <Card className="p-6 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-lg">Ducting Connector</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Penyambung ke sistem ducting internal gedung
-                </p>
-                <Badge variant="outline">Khusus</Badge>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">✅</div>
+              </div>
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Garansi Resmi</h3>
+              <p className="text-neutral-600 text-sm">Bergaransi resmi dengan dukungan purna jual</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Download & CTA Section */}
-      <section className="py-20 px-6 bg-primary text-primary-foreground">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Butuh Informasi <span className="font-semibold">Lebih Detail?</span>
+      {/* CTA Section */}
+      <section className="py-24 px-6 bg-primary text-white text-center">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
+            Butuh Konsultasi Produk?
           </h2>
-          <p className="text-xl mb-12 text-primary-foreground/80">
-            Unduh brosur lengkap atau konsultasi langsung dengan tim teknis kami
+          <p className="text-xl md:text-2xl mb-12 text-white/80 font-light">
+            Tim ahli kami siap membantu memilih produk C Vent yang tepat untuk kebutuhan Anda
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Button variant="hero-outline" size="lg" className="flex items-center gap-3">
-              <Download size={20} />
-              Unduh Brosur PDF
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+            >
+              Minta Penawaran →
             </Button>
-            <Button variant="hero-outline" size="lg" className="flex items-center gap-3">
-              <MessageCircle size={20} />
-              Minta Penawaran
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+            >
+              Konsultasi Gratis
             </Button>
-            <Button variant="hero-outline" size="lg" className="flex items-center gap-3">
-              <Phone size={20} />
-              Konsultasi Teknis
-            </Button>
-          </div>
-
-          <div className="mt-12 p-6 bg-primary-foreground/10 rounded-lg">
-            <p className="text-sm text-primary-foreground/80">
-              <strong>Catatan:</strong> Kapasitas ventilasi dapat bervariasi tergantung kondisi angin, 
-              ketinggian instalasi, dan faktor lingkungan. Konsultasi teknis gratis untuk perhitungan yang akurat.
-            </p>
           </div>
         </div>
       </section>
