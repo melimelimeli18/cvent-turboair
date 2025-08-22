@@ -10,7 +10,7 @@ export const Footer = () => {
               <img 
                 src="/lovable-uploads/88dd1ec6-51d4-4d75-8d4f-24a525b157a0.png" 
                 alt="C Vent Logo" 
-                className="h-12 w-auto"
+                className="h-8 w-auto"
               />
             </div>
             <p className="text-primary-foreground/70 mb-4">
