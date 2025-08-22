@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wind, Zap, Wrench, Clock, Shield, Building } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import windPowerImage from "@/assets/wind-power.jpg";
+import precisionBladesImage from "@/assets/precision-blades.jpg";
+import hotAirExtractionImage from "@/assets/hot-air-extraction.jpg";
+import freshAirCirculationImage from "@/assets/fresh-air-circulation.jpg";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
@@ -81,47 +85,104 @@ export default function Index() {
       </section>
 
       {/* Solutions Presentation */}
-      <section className="py-20 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-16">
-            We proudly present:
-          </h2>
-          <div className="text-6xl md:text-8xl font-bold text-primary mb-8">
-            C VENT
+      <section className="py-20 px-6 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
+              We Proudly Present <span className="font-semibold text-primary">C Vent</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Solusi ventilasi alami yang efisien, ramah lingkungan, dan terbukti sejak 1996
+            </p>
           </div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Solusi ventilasi premium yang telah dipercaya sejak 1996
-          </p>
           
-          {/* How it works */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wind className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="font-semibold">Angin Natural</h3>
-              <p className="text-sm text-muted-foreground">Menggunakan kekuatan angin alami</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card 1: Kekuatan Angin Alami */}
+            <div className="group cursor-pointer">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={windPowerImage} 
+                    alt="Kekuatan Angin Alami"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Kekuatan Angin Alami
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Menggunakan aliran udara alami untuk menggerakkan turbin, bekerja tanpa listrik sehingga hemat energi dan ramah lingkungan.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wind className="w-10 h-10 text-primary animate-spin" />
-              </div>
-              <h3 className="font-semibold">Turbin Berputar</h3>
-              <p className="text-sm text-muted-foreground">Baling-baling presisi berputar optimal</p>
+
+            {/* Card 2: Baling-baling Presisi */}
+            <div className="group cursor-pointer">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={precisionBladesImage} 
+                    alt="Baling-baling Presisi"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Baling-baling Presisi
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Desain presisi memastikan putaran stabil, tahan lama, dan efisiensi maksimal dalam segala kondisi cuaca.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wind className="w-10 h-10 text-red-500" />
-              </div>
-              <h3 className="font-semibold">Udara Panas Keluar</h3>
-              <p className="text-sm text-muted-foreground">Mengeluarkan udara panas dari ruangan</p>
+
+            {/* Card 3: Mengeluarkan Udara Panas */}
+            <div className="group cursor-pointer">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={hotAirExtractionImage} 
+                    alt="Mengeluarkan Udara Panas"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Mengeluarkan Udara Panas
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Secara otomatis membuang udara panas, lembap, dan kotor dari ruangan untuk menciptakan lingkungan yang nyaman.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wind className="w-10 h-10 text-blue-500" />
-              </div>
-              <h3 className="font-semibold">Udara Segar Masuk</h3>
-              <p className="text-sm text-muted-foreground">Sirkulasi udara segar yang optimal</p>
+
+            {/* Card 4: Sirkulasi Udara Segar */}
+            <div className="group cursor-pointer">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={freshAirCirculationImage} 
+                    alt="Sirkulasi Udara Segar"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Sirkulasi Udara Segar
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Menjaga sirkulasi udara segar 24 jam nonstop untuk kenyamanan optimal dan produktivitas maksimal.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
