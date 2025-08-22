@@ -8,7 +8,7 @@ export const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/e85e277d-52d9-46ea-b953-08c01260cd07.png" 
+                src="/lovable-uploads/88dd1ec6-51d4-4d75-8d4f-24a525b157a0.png" 
                 alt="C Vent Logo" 
                 className="h-8 w-auto"
               />
