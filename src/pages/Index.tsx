@@ -1,27 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wind, Zap, Wrench, Clock, Shield, Building } from "lucide-react";
-import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 import windPowerImage from "@/assets/wind-power.jpg";
 import precisionBladesImage from "@/assets/precision-blades.jpg";
 import hotAirExtractionImage from "@/assets/hot-air-extraction.jpg";
 import freshAirCirculationImage from "@/assets/fresh-air-circulation.jpg";
-import aluminiumSeriesImage from "@/assets/cvent-aluminium-series.jpg";
-import stainlessSeriesImage from "@/assets/cvent-stainless-series.jpg";
-import accessoriesImage from "@/assets/cvent-accessories.jpg";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+
 export default function Index() {
-  return <div className="min-h-screen bg-background">
-      <Navigation isDark={false} />
+  return (
+    <div className="min-h-screen bg-background dark">
+      <Navigation isDark={true} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-      backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${heroImage})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 bg-hero-overlay"></div>
         <div className="relative z-10 container mx-auto max-w-4xl text-center px-6">
           <div className="space-y-8">
@@ -32,11 +33,11 @@ export default function Index() {
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light">
               Konsultasi ventilasi terbaik untuk gedung & industri Anda sekarang juga !
             </p>
-             <div className="pt-8">
-               <Button variant="outline" size="lg" className="text-lg px-12 py-4 rounded-full">
-                 Book Jadwal Konsultasi →
-               </Button>
-             </div>
+            <div className="pt-8">
+              <Button variant="hero-outline" size="lg" className="text-lg px-12 py-4 rounded-full">
+                Book Jadwal Konsultasi →
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -88,10 +89,10 @@ export default function Index() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-              We Proudly Present <span className="font-semibold text-primary">C Vent</span>
+              Solusi Ventilasi Hemat Energi Tanpa Listrik Sejak 1996 <span className="font-semibold text-primary">C Vent</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Solusi ventilasi alami yang efisien, ramah lingkungan, dan terbukti sejak 1996
+              Dirancang khusus untuk iklim tropis Indonesia, dengan desain paten dan garansi resmi hingga 10 tahun.
             </p>
           </div>
           
@@ -100,13 +101,17 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={windPowerImage} alt="Kekuatan Angin Alami" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                  <img 
+                    src={windPowerImage} 
+                    alt="Kekuatan Angin Alami"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
-                 <CardContent className="p-6">
-                   <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                     Kekuatan Angin Alami
-                   </h3>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Kekuatan Angin Alami
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Menggunakan aliran udara alami untuk menggerakkan turbin, bekerja tanpa listrik sehingga hemat energi dan ramah lingkungan.
                   </p>
@@ -118,13 +123,17 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={precisionBladesImage} alt="Baling-baling Presisi" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                  <img 
+                    src={precisionBladesImage} 
+                    alt="Baling-baling Presisi"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
-                 <CardContent className="p-6">
-                   <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                     Baling-baling Presisi
-                   </h3>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Baling-baling Presisi
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Desain presisi memastikan putaran stabil, tahan lama, dan efisiensi maksimal dalam segala kondisi cuaca.
                   </p>
@@ -136,13 +145,17 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={hotAirExtractionImage} alt="Mengeluarkan Udara Panas" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                  <img 
+                    src={hotAirExtractionImage} 
+                    alt="Mengeluarkan Udara Panas"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
-                 <CardContent className="p-6">
-                   <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                     Mengeluarkan Udara Panas
-                   </h3>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Mengeluarkan Udara Panas
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Secara otomatis membuang udara panas, lembap, dan kotor dari ruangan untuk menciptakan lingkungan yang nyaman.
                   </p>
@@ -154,13 +167,17 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={freshAirCirculationImage} alt="Sirkulasi Udara Segar" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                  <img 
+                    src={freshAirCirculationImage} 
+                    alt="Sirkulasi Udara Segar"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
-                 <CardContent className="p-6">
-                   <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                     Sirkulasi Udara Segar
-                   </h3>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                    Sirkulasi Udara Segar
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Menjaga sirkulasi udara segar 24 jam nonstop untuk kenyamanan optimal dan produktivitas maksimal.
                   </p>
@@ -229,109 +246,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* All Products */}
-      <section className="py-20 px-6 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-              Produk Turbine Ventilator C Vent
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Tersedia berbagai ukuran dan material untuk kebutuhan bangunan Anda
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* C Vent Aluminium Series */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={aluminiumSeriesImage} 
-                    alt="C Vent Aluminium Series" 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                  />
-                </div>
-                <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                    C Vent Aluminium Series
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4 flex-grow">
-                    Ringan, tahan karat, dan lebih ekonomis untuk berbagai ukuran 14", 20", 24", 30"
-                  </p>
-                  <Link to="/produk">
-                    <Button 
-                      variant="default" 
-                      className="w-full hover:bg-primary/90 transition-colors duration-300"
-                    >
-                      Lihat Detail
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* C Vent Stainless Steel Series */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={stainlessSeriesImage} 
-                    alt="C Vent Stainless Steel Series" 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                  />
-                </div>
-                <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                    C Vent Stainless Steel Series
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4 flex-grow">
-                    Kokoh, premium, dan umur pakai lebih panjang untuk ukuran 20", 24", 30"
-                  </p>
-                  <Link to="/produk">
-                    <Button 
-                      variant="default" 
-                      className="w-full hover:bg-primary/90 transition-colors duration-300"
-                    >
-                      Lihat Detail
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Aksesoris & Sparepart */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full md:col-span-2 lg:col-span-1">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={accessoriesImage} 
-                    alt="Aksesoris & Sparepart" 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                  />
-                </div>
-                <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-primary text-foreground">
-                    Aksesoris & Sparepart
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4 flex-grow">
-                    Base ridge, slope, curb, flashing, jaring anti serangga dan komponen pendukung lainnya
-                  </p>
-                  <Link to="/produk">
-                    <Button 
-                      variant="default" 
-                      className="w-full hover:bg-primary/90 transition-colors duration-300"
-                    >
-                      Lihat Detail
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Applications */}
       <section className="py-20 px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
@@ -381,7 +295,7 @@ export default function Index() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-secondary">
+      <section className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
@@ -437,12 +351,13 @@ export default function Index() {
           <p className="text-xl md:text-2xl mb-12 text-primary-foreground/80 font-light">
             Konsultasikan kebutuhan ventilasi Anda dengan tim ahli kami
           </p>
-           <Button variant="outline" size="lg" className="text-lg px-12 py-4 rounded-full">
-             Hubungi Kami Sekarang →
-           </Button>
+          <Button variant="hero-outline" size="lg" className="text-lg px-12 py-4 rounded-full">
+            Hubungi Kami Sekarang →
+          </Button>
         </div>
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 }
