@@ -5,8 +5,14 @@ export const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div className="bg-slate-800">
-            <h3 className="text-2xl font-bold mb-4">C Vent</h3>
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/lovable-uploads/88dd1ec6-51d4-4d75-8d4f-24a525b157a0.png" 
+                alt="C Vent Logo" 
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-primary-foreground/70 mb-4">
               Solusi ventilasi premium untuk gedung & industri sejak 1996
             </p>
