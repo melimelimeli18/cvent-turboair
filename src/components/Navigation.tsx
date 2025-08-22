@@ -23,12 +23,8 @@ export const Navigation = ({ isDark = false }: { isDark?: boolean }) => {
   return (
     <nav className={`${isDark ? "absolute" : "relative"} top-0 left-0 right-0 z-50 p-6 ${!isDark ? "bg-background border-b" : ""}`}>
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/88dd1ec6-51d4-4d75-8d4f-24a525b157a0.png" 
-            alt="C Vent Logo" 
-            className="h-16 w-auto"
-          />
+        <Link to="/" className={`text-2xl font-bold ${textColor}`}>
+          C Vent
         </Link>
         
         {/* Desktop Navigation */}
