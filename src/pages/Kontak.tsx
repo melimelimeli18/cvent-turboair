@@ -7,16 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 export default function Kontak() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Kontak C Vent | Konsultasi Gratis Turbine Ventilator</title>
-        <meta name="description" content="Hubungi C Vent untuk konsultasi gratis turbine ventilator. Form kontak B2B, WhatsApp Business, alamat kantor Jakarta. Tim ahli siap membantu proyek Anda." />
-      </Helmet>
-      
       <Navigation />
 
       <section className="py-20 px-6 bg-primary text-primary-foreground">

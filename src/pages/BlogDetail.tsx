@@ -3,16 +3,10 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 export default function BlogDetail() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Turbine Ventilator vs Exhaust Fan - Blog C Vent</title>
-        <meta name="description" content="Perbandingan lengkap turbine ventilator vs exhaust fan untuk pabrik. Analisis efisiensi energi, biaya operasional, dan ROI." />
-      </Helmet>
-      
       <Navigation />
 
       <article className="py-20 px-6">

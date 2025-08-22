@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Building2, TrendingDown, ThermometerSun, DollarSign, Calendar, MapPin, User } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 export default function Klien() {
   const clientLogos = [
@@ -124,12 +123,6 @@ export default function Klien() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Klien & Studi Kasus C Vent | Testimonial Turbine Ventilator</title>
-        <meta name="description" content="Klien C Vent: Unilever, Astra, Indofood, Adaro. Studi kasus lengkap instalasi turbine ventilator di pabrik, gudang, masjid. ROI 14-18 bulan, hemat biaya hingga 43%." />
-        <meta name="keywords" content="klien c vent, testimonial turbine ventilator, studi kasus ventilasi, roi ventilasi gedung, penghematan biaya ac" />
-      </Helmet>
-      
       <Navigation />
 
       {/* Hero Section */}

@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, MessageCircle, Phone } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 export default function Produk() {
   const productSpecs = [
@@ -87,12 +86,6 @@ export default function Produk() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Produk Turbine Ventilator - C Vent | Spesifikasi Lengkap</title>
-        <meta name="description" content="Produk lengkap Turbine Ventilator C Vent ukuran 14-30 inch. Tersedia material aluminium dan stainless steel. Kapasitas 800-4500 m³/jam. Garansi resmi." />
-        <meta name="keywords" content="turbine ventilator 14 inch, turbine ventilator 20 inch, ventilasi atap aluminium, ventilasi stainless steel, spesifikasi turbin" />
-      </Helmet>
-      
       <Navigation />
 
       {/* Hero Section */}

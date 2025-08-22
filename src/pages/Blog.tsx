@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 export default function Blog() {
   const articles = [
@@ -36,11 +35,6 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Blog C Vent | Tips Ventilasi & Studi Kasus Turbine Ventilator</title>
-        <meta name="description" content="Blog C Vent: tips ventilasi gedung, perbandingan turbine ventilator vs exhaust fan, studi kasus penghematan biaya, panduan ventilasi alami untuk industri." />
-      </Helmet>
-      
       <Navigation />
 
       <section className="py-20 px-6 bg-primary text-primary-foreground">

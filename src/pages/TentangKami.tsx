@@ -3,17 +3,10 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Users, Award, MapPin, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 export default function TentangKami() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Tentang Kami - C Vent | Ahli Ventilasi Sejak 1996</title>
-        <meta name="description" content="C Vent berdiri sejak 1996 sebagai spesialis ventilasi alami B2B. Kualitas terjamin, tim berpengalaman, dukungan purna jual, garansi resmi & terdaftar HKI Indonesia." />
-        <meta name="keywords" content="tentang c vent, perusahaan ventilasi, turbine ventilator indonesia, ventilasi gedung, hki ventilasi" />
-      </Helmet>
-      
       <Navigation />
 
       {/* Hero Section */}

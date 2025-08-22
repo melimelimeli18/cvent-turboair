@@ -4,17 +4,10 @@ import { Wind, Zap, Wrench, Clock, Shield, Building } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Helmet } from "react-helmet";
 
 export default function Index() {
   return (
     <div className="min-h-screen bg-background dark">
-      <Helmet>
-        <title>C Vent - Solusi Ventilasi Hemat Energi untuk Gedung & Industri</title>
-        <meta name="description" content="Turbine Ventilator C Vent - Teknologi Premium sejak 1996. Ventilasi alami tanpa listrik untuk pabrik, gudang & gedung. Hemat energi hingga 60%. Konsultasi gratis!" />
-        <meta name="keywords" content="turbine ventilator, ventilasi atap, ventilasi alami, turboair, hemat energi, ventilasi gedung, ventilasi pabrik" />
-      </Helmet>
-      
       <Navigation isDark={true} />
 
       {/* Hero Section */}

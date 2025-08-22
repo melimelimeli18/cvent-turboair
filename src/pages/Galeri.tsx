@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Play } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 export default function Galeri() {
   const projectGallery = [
@@ -112,12 +111,6 @@ export default function Galeri() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Galeri Proyek C Vent | Instalasi Turbine Ventilator Indonesia</title>
-        <meta name="description" content="Galeri lengkap proyek instalasi C Vent di pabrik, gudang, sekolah & tempat ibadah. Lihat hasil before-after pemasangan turbine ventilator. Jadwalkan survei lokasi." />
-        <meta name="keywords" content="galeri c vent, instalasi turbine ventilator, proyek ventilasi gedung, before after ventilasi, survei lokasi" />
-      </Helmet>
-      
       <Navigation />
 
       {/* Hero Section */}
