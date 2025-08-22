@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wind, Wrench } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Produk() {
   const products = [
@@ -19,13 +20,6 @@ export default function Produk() {
       size: '24"',
       capacity: '2,200 m³/jam',
       description: 'Cocok untuk ruangan menengah dan perkantoran'
-    },
-    {
-      id: 'c-75',
-      name: 'C Vent Type C-75',
-      size: '30"',
-      capacity: '3,500 m³/jam',
-      description: 'Optimal untuk gedung besar dan industri ringan'
     },
     {
       id: 'c-90',
@@ -67,7 +61,7 @@ export default function Produk() {
               Pilihan Ukuran C Vent
             </h2>
             <p className="text-lg text-neutral-600">
-              Tersedia 5 ukuran standar untuk berbagai kebutuhan bangunan
+              Tersedia 4 ukuran standar untuk berbagai kebutuhan bangunan
             </p>
           </div>
 
@@ -97,12 +91,17 @@ export default function Produk() {
                         {product.description}
                       </p>
                     </div>
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    <Link 
+                      to={`/produk/${product.id}`}
+                      className="w-full"
                     >
-                      Lihat Detail
-                    </Button>
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                      >
+                        Lihat Detail
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>
