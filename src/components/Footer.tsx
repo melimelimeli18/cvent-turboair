@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-
 export const Footer = () => {
-  return (
-    <footer className="py-16 px-6 bg-primary-dark text-primary-foreground">
+  return <footer className="py-16 px-6 bg-primary-dark text-primary-foreground">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div>
+          <div className="bg-slate-800">
             <h3 className="text-2xl font-bold mb-4">C Vent</h3>
             <p className="text-primary-foreground/70 mb-4">
               Solusi ventilasi premium untuk gedung & industri sejak 1996
@@ -83,6 +81,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };

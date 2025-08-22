@@ -8,21 +8,16 @@ import hotAirExtractionImage from "@/assets/hot-air-extraction.jpg";
 import freshAirCirculationImage from "@/assets/fresh-air-circulation.jpg";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-
 export default function Index() {
-  return (
-    <div className="min-h-screen bg-background dark">
+  return <div className="min-h-screen bg-background dark">
       <Navigation isDark={true} />
 
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${heroImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-hero-overlay"></div>
         <div className="relative z-10 container mx-auto max-w-4xl text-center px-6">
           <div className="space-y-8">
@@ -101,15 +96,11 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={windPowerImage} 
-                    alt="Kekuatan Angin Alami"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
+                  <img src={windPowerImage} alt="Kekuatan Angin Alami" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 text-slate-900">
                     Kekuatan Angin Alami
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -123,15 +114,11 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={precisionBladesImage} 
-                    alt="Baling-baling Presisi"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
+                  <img src={precisionBladesImage} alt="Baling-baling Presisi" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 text-slate-950">
                     Baling-baling Presisi
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -145,15 +132,11 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={hotAirExtractionImage} 
-                    alt="Mengeluarkan Udara Panas"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
+                  <img src={hotAirExtractionImage} alt="Mengeluarkan Udara Panas" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 text-gray-900">
                     Mengeluarkan Udara Panas
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -167,15 +150,11 @@ export default function Index() {
             <div className="group cursor-pointer">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={freshAirCirculationImage} 
-                    alt="Sirkulasi Udara Segar"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
+                  <img src={freshAirCirculationImage} alt="Sirkulasi Udara Segar" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 text-zinc-900">
                     Sirkulasi Udara Segar
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -358,6 +337,5 @@ export default function Index() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }
