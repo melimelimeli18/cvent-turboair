@@ -2,21 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wind, Zap, Wrench, Clock, Shield, Building } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { Helmet } from "react-helmet";
 
 export default function Index() {
   return (
     <div className="min-h-screen bg-background dark">
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-50 p-6">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-white">C Vent</div>
-          <div className="hidden md:flex space-x-8 text-white">
-            <a href="#" className="hover:text-white/70 transition-colors">Home</a>
-            <a href="#" className="hover:text-white/70 transition-colors">Products</a>
-            <a href="#" className="hover:text-white/70 transition-colors">Contact</a>
-          </div>
-        </div>
-      </nav>
+      <Helmet>
+        <title>C Vent - Solusi Ventilasi Hemat Energi untuk Gedung & Industri</title>
+        <meta name="description" content="Turbine Ventilator C Vent - Teknologi Premium sejak 1996. Ventilasi alami tanpa listrik untuk pabrik, gudang & gedung. Hemat energi hingga 60%. Konsultasi gratis!" />
+        <meta name="keywords" content="turbine ventilator, ventilasi atap, ventilasi alami, turboair, hemat energi, ventilasi gedung, ventilasi pabrik" />
+      </Helmet>
+      
+      <Navigation isDark={true} />
 
       {/* Hero Section */}
       <section 
@@ -304,38 +303,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 bg-primary-dark text-primary-foreground">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">C Vent</h3>
-              <p className="text-primary-foreground/70">
-                Solusi ventilasi premium untuk gedung & industri sejak 1996
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Kontak</h4>
-              <div className="space-y-2 text-primary-foreground/70">
-                <p>📞 +62 21 1234 5678</p>
-                <p>📧 info@cvent.co.id</p>
-                <p>📍 Jakarta, Indonesia</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Produk</h4>
-              <div className="space-y-2 text-primary-foreground/70">
-                <p>Turbine Ventilator</p>
-                <p>Industrial Ventilation</p>
-                <p>Konsultasi & Instalasi</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/50">
-            <p>&copy; 2024 C Vent. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
