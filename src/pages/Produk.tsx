@@ -70,14 +70,17 @@ export default function Produk() {
               <div key={product.id} className="group">
                 <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
                   <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                    <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center text-neutral-500">
-                        <Wind className="w-16 h-16 mb-4 mx-auto" />
-                        <p className="text-sm font-medium">{product.name}</p>
-                        <p className="text-xs">({product.size})</p>
-                      </div>
-                    </div>
+                    <img 
+                      src={`/lovable-uploads/${
+                        product.id === 'c-45' ? '06dff626-e6b9-44fc-8c2d-90a3b633e315.png' :
+                        product.id === 'c-60' ? '9bca9c73-a575-447e-9cc5-85103706559c.png' :
+                        product.id === 'c-90' ? 'f1b0b239-cc0e-4006-adac-f4e1894d144b.png' :
+                        'b0b48871-0303-43c8-b081-e50a6074db32.png'
+                      }`}
+                      alt={`${product.name} - Turbine Ventilator C Vent`}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
                   </div>
                   <CardContent className="p-6 flex flex-col justify-between flex-grow">
                     <div>

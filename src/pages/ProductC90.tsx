@@ -48,14 +48,12 @@ export default function ProductC90() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Product Image Placeholder */}
             <div className="relative aspect-square overflow-hidden bg-neutral-100 rounded-xl">
-              <div className="absolute inset-0 bg-primary/30"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-neutral-500">
-                  <Wind className="w-32 h-32 mb-4 mx-auto" />
-                  <p className="text-lg font-medium">C Vent Type C-90</p>
-                  <p className="text-sm">(36" Diameter)</p>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/f1b0b239-cc0e-4006-adac-f4e1894d144b.png"
+                alt="C Vent Type C-90 - Turbine Ventilator"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
             </div>
 
             {/* Product Info */}
