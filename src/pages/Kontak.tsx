@@ -30,7 +30,7 @@ export default function Kontak() {
             {/* Contact Form */}
             <Card className="border-0 shadow-xl">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-semibold mb-6">Form Konsultasi B2B</h2>
+                <h2 className="text-2xl font-semibold mb-6">Form Konsultasi</h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -108,22 +108,12 @@ export default function Kontak() {
                   <h3 className="text-xl font-semibold mb-6">Kontak Langsung</h3>
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Phone className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium">Telepon Kantor</p>
-                        <p className="text-muted-foreground">+62 21 1234 5678</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                         <MessageCircle className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
-                        <p className="font-medium">WhatsApp Business</p>
-                        <p className="text-muted-foreground">+62 812 3456 7890</p>
+                        <p className="font-medium">Mobile / WhatsApp</p>
+                        <p className="text-muted-foreground">0812 100 17 168</p>
                         <Button variant="outline" size="sm" className="mt-2">
                           Chat WhatsApp
                         </Button>
@@ -135,9 +125,18 @@ export default function Kontak() {
                         <Mail className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Email Sales</p>
-                        <p className="text-muted-foreground">sales@cvent.co.id</p>
-                        <p className="text-muted-foreground">info@cvent.co.id</p>
+                        <p className="font-medium">Email</p>
+                        <p className="text-muted-foreground">cvent.ventilator@gmail.com</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Website</p>
+                        <p className="text-muted-foreground">turbineventilator.co.id</p>
                       </div>
                     </div>
                   </div>
@@ -147,23 +146,44 @@ export default function Kontak() {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold mb-6">Lokasi Kantor</h3>
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Kantor Pusat</p>
+                        <p className="text-muted-foreground">Jl. Raya Bekasi Timur KM 17 No.6</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-medium">PT C Vent Indonesia</p>
-                      <p className="text-muted-foreground">Jl. Industri Raya No. 123</p>
-                      <p className="text-muted-foreground">Kawasan Industri Pulogadung</p>
-                      <p className="text-muted-foreground">Jakarta Timur 13920</p>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Cabang Jakarta Timur</p>
+                        <p className="text-muted-foreground">Jl. Raya Bekasi Blok KM No.18 RT.1/RW.3</p>
+                        <p className="text-muted-foreground">Jatinegara, Kec. Cakung, Kota Jakarta Timur</p>
+                        <p className="text-muted-foreground">Daerah Khusus Ibukota Jakarta</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Cabang Bekasi Selatan</p>
+                        <p className="text-muted-foreground">Jl. Raya Pekayon, Komplek Griya Cendana 4 No.17</p>
+                        <p className="text-muted-foreground">Bekasi Selatan</p>
+                      </div>
                     </div>
                   </div>
-                  
-                  <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin size={48} className="mx-auto text-muted-foreground mb-2" />
-                      <p className="text-muted-foreground">Google Maps</p>
-                    </div>
+
+                  <div className="mt-8 p-6 bg-primary/5 rounded-lg border-l-4 border-primary">
+                    <h4 className="font-semibold text-primary mb-2">Angkat Telepon Anda dan Hubungi Kami Sekarang Juga!</h4>
+                    <p className="text-muted-foreground">Jangan ragu untuk sekedar berkonsultasi karena Anda adalah prioritas utama dalam pekerjaan kami.</p>
                   </div>
                 </CardContent>
               </Card>
