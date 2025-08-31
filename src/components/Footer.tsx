@@ -23,7 +23,10 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} />
-                <span>Senin - Jumat: 08:00 - 17:00</span>
+                <div className="flex flex-col">
+                  <span>Senin - Jumat: 08:00 - 17:00</span>
+                  <span>Sabtu: 08:00 - 15:00</span>
+                </div>
               </div>
             </div>
           </div>

@@ -287,6 +287,13 @@ export default function Index() {
             Dipercaya Ratusan Perusahaan 
             <span className="block font-semibold">di Seluruh Indonesia</span>
           </h2>
+          <div className="mb-8">
+            <div className="inline-block bg-white/10 rounded-full px-8 py-4 backdrop-blur-sm">
+              <p className="text-2xl md:text-3xl font-bold text-white">
+                Total Proyek: <span className="text-yellow-300">3228</span>
+              </p>
+            </div>
+          </div>
           <p className="text-xl md:text-2xl mb-12 text-white/80 font-light">
             Bergabunglah dengan klien-klien terpercaya yang telah merasakan manfaat C Vent
           </p>
