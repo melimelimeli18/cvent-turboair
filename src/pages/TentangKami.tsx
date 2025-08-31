@@ -237,10 +237,35 @@ export default function TentangKami() {
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-medium">PT C Vent Indonesia</p>
-                          <p>Jl. Industri Raya No. 123</p>
-                          <p>Kawasan Industri Pulogadung</p>
-                          <p>Jakarta Timur 13920, Indonesia</p>
+                          <p className="font-medium">C Vent</p>
+                          <p>Jl. Raya Bekasi Timur KM 17 No.6</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">Cabang Jakarta Timur</h3>
+                    <div className="space-y-3 text-muted-foreground">
+                      <div className="flex items-start gap-3">
+                        <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p>Jl. Raya Bekasi Blok KM No.18 RT.1/RW.3</p>
+                          <p>Jatinegara, Kec. Cakung, Kota Jakarta Timur</p>
+                          <p>Daerah Khusus Ibukota Jakarta</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">Cabang Bekasi Selatan</h3>
+                    <div className="space-y-3 text-muted-foreground">
+                      <div className="flex items-start gap-3">
+                        <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p>Jl. Raya Pekayon, Komplek Griya Cendana 4 No.17</p>
+                          <p>Bekasi Selatan</p>
                         </div>
                       </div>
                     </div>
@@ -249,7 +274,7 @@ export default function TentangKami() {
                   <div className="space-y-2 text-muted-foreground">
                     <p><strong>Jam Operasional:</strong></p>
                     <p>Senin - Jumat: 08:00 - 17:00 WIB</p>
-                    <p>Sabtu: 08:00 - 12:00 WIB (by appointment)</p>
+                    <p>Sabtu: 08:00 - 15:00 WIB</p>
                     <p>Minggu: Tutup</p>
                   </div>
                 </CardContent>
