@@ -11,7 +11,7 @@ export const Navigation = ({ isDark = false }: { isDark?: boolean }) => {
     { href: "/", label: "Beranda" },
     { href: "/tentang-kami", label: "Tentang Kami" },
     { href: "/produk", label: "Produk" },
-    { href: "/galeri", label: "Galeri" },
+    // { href: "/galeri", label: "Galeri" }, // Temporarily hidden
     { href: "/klien", label: "Klien" },
     { href: "/blog", label: "Blog" },
     { href: "/kontak", label: "Kontak" },

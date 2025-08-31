@@ -25,7 +25,7 @@ const App = () => (
       <Route path="/produk/c-75" element={<ProductC75 />} />
       <Route path="/produk/c-90" element={<ProductC90 />} />
       <Route path="/produk/c-105" element={<ProductC105 />} />
-      <Route path="/galeri" element={<Galeri />} />
+      {/* <Route path="/galeri" element={<Galeri />} /> */} {/* Temporarily hidden */}
       <Route path="/klien" element={<Klien />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogDetail />} />
