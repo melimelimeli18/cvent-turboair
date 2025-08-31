@@ -141,6 +141,45 @@ export default function ProductC60() {
         </div>
       </section>
 
+      {/* Technical Diagram */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-6">
+              Diagram Teknis
+            </h2>
+            <p className="text-lg text-neutral-600">
+              Detail konstruksi dan komponen C Vent Type C-60
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden border-0 shadow-xl">
+              <CardContent className="p-8">
+                <img 
+                  src="/lovable-uploads/ba9789fd-671c-4049-a3a8-8cb543c015fe.png"
+                  alt="Diagram Teknis C Vent Type C-60 - Konstruksi Internal dan Komponen"
+                  className="w-full h-auto"
+                />
+              </CardContent>
+            </Card>
+            
+            <div className="mt-8 bg-neutral-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-neutral-900 mb-4">Komponen Utama:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-neutral-600">
+                <div>• Topi 0,8 mm</div>
+                <div>• Fan Conventional 34 pcs 0,6 mm</div>
+                <div>• Shaft Construction ST 18 mm</div>
+                <div>• Double Fan 5 pcs 0,5 mm</div>
+                <div>• Bearing FBJ Made in Japan Full Stainless Steel</div>
+                <div>• Flexible Ducting 0,6 mm</div>
+                <div>• Wings Plate 0,6 mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Applications */}
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
