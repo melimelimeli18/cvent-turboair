@@ -16,7 +16,7 @@ export default function TentangKami() {
             Tentang <span className="font-bold">C Vent</span>
           </h1>
           <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto">
-            Spesialis ventilasi alami terpercaya untuk solusi B2B sejak 1996
+            Spesialis ventilasi alami terpercaya sejak 1997
           </p>
         </div>
       </section>
@@ -31,9 +31,10 @@ export default function TentangKami() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  <strong>C Vent</strong> berdiri sejak <strong>1996</strong> dengan fokus khusus pada 
-                  pengembangan dan distribusi sistem ventilasi alami untuk pasar B2B. Selama lebih 
-                  dari 28 tahun, kami telah menjadi mitra terpercaya ribuan perusahaan di Indonesia.
+                  <strong>C Vent</strong> telah diproduksi sejak <strong>1997</strong>, terbuat dari 
+                  bahan baku pilihan yang sangat berkualitas tinggi, dikerjakan oleh tenaga ahli 
+                  profesional dan berpengalaman dibidangnya, yang membuat kami menjadi leader 
+                  dibidang turbine ventilator atau turboair.
                 </p>
                 <p>
                   Spesialisasi kami adalah <strong>Turbine Ventilator</strong> berkualitas tinggi yang 
@@ -54,8 +55,8 @@ export default function TentangKami() {
                       <Award className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Berdiri Sejak 1996</h3>
-                      <p className="text-sm text-muted-foreground">28+ tahun pengalaman</p>
+                      <h3 className="font-semibold">Diproduksi Sejak 1997</h3>
+                      <p className="text-sm text-muted-foreground">27+ tahun pengalaman</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -63,8 +64,8 @@ export default function TentangKami() {
                       <Users className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Fokus B2B</h3>
-                      <p className="text-sm text-muted-foreground">Spesialis ventilasi industri</p>
+                      <h3 className="font-semibold">Leader Turboair</h3>
+                      <p className="text-sm text-muted-foreground">Spesialis turbine ventilator</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
