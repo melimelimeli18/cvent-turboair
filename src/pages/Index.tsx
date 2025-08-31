@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Wind, Zap, Wrench, Clock, Shield, Building, CheckCircle } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -102,39 +103,40 @@ export default function Index() {
             <div className="group">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-700">
-                      <div className="text-6xl mb-2">⚡</div>
-                      <p className="text-sm font-medium">C-45 (18")</p>
-                    </div>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/06dff626-e6b9-44fc-8c2d-90a3b633e315.png"
+                    alt="C VENT TYPE C-45 (18 inch) - Turbine Ventilator C Vent"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
                 </div>
                 <CardContent className="p-6 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      C Vent Type C-45
+                      C VENT TYPE C-45 (18")
                     </h3>
-                    <p className="text-neutral-600 mb-4 leading-relaxed">
-                      Ringan dan tahan karat, cocok untuk bangunan kecil hingga menengah
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
-                      <div className="text-center p-2 bg-neutral-50 rounded">
-                        <div className="font-bold text-primary">62,47 m³</div>
-                        <div className="text-neutral-600">per menit</div>
-                      </div>
-                      <div className="text-center p-2 bg-neutral-50 rounded">
-                        <div className="font-bold text-primary">6-8,5 kg</div>
-                        <div className="text-neutral-600">berat</div>
+                    <div className="space-y-2 text-sm text-neutral-600 mb-4">
+                      <div><span className="font-medium">Bahan:</span> Alluminium dan Stainless Steel</div>
+                      <div><span className="font-medium">Bearing:</span> Full Stainless Steel, Made In Japan</div>
+                      <div><span className="font-medium">Diameter:</span> 45 CM = 18"</div>
+                      <div><span className="font-medium">Dimensi:</span> 75 x 68 x 68</div>
+                      <div><span className="font-medium">Berat:</span> 6 kg s/d 8,5 kg</div>
+                      <div className="text-lg font-medium text-primary">
+                        <span className="font-medium text-neutral-600 text-sm">Kapasitas Hisap:</span> 62,47 M³ / menit
                       </div>
                     </div>
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  <Link 
+                    to="/produk/c-45"
+                    className="w-full"
                   >
-                    Lihat Detail
-                  </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    >
+                      Lihat Detail
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
@@ -143,94 +145,93 @@ export default function Index() {
             <div className="group">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-700">
-                      <div className="text-6xl mb-2">🔥</div>
-                      <p className="text-sm font-medium">C-75 (30")</p>
-                    </div>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/06dff626-e6b9-44fc-8c2d-90a3b633e315.png"
+                    alt="C VENT TYPE C-75 (30 inch) - Turbine Ventilator C Vent"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
                 </div>
                 <CardContent className="p-6 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      C Vent Type C-75
+                      C VENT TYPE C-75 (30")
                     </h3>
-                    <p className="text-neutral-600 mb-4 leading-relaxed">
-                      Kapasitas sedang-tinggi untuk bangunan komersial dan industri menengah
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
-                      <div className="text-center p-2 bg-neutral-50 rounded">
-                        <div className="font-bold text-primary">157,95 m³</div>
-                        <div className="text-neutral-600">per menit</div>
-                      </div>
-                      <div className="text-center p-2 bg-neutral-50 rounded">
-                        <div className="font-bold text-primary">FBJ Japan</div>
-                        <div className="text-neutral-600">bearing</div>
+                    <div className="space-y-2 text-sm text-neutral-600 mb-4">
+                      <div><span className="font-medium">Bahan:</span> Alluminium dan Stainless Steel</div>
+                      <div><span className="font-medium">Bearing:</span> FBJ Made in Japan Full Steinless Steel = 3pc</div>
+                      <div><span className="font-medium">Diameter:</span> 75 CM = 30"</div>
+                      <div><span className="font-medium">Dimensi:</span> 120 x 100 x 100</div>
+                      <div><span className="font-medium">Berat:</span> 14,5 kg s/d 21,5 kg</div>
+                      <div className="text-lg font-medium text-primary">
+                        <span className="font-medium text-neutral-600 text-sm">Kapasitas Hisap:</span> 157,95 M³ / menit
                       </div>
                     </div>
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  <Link 
+                    to="/produk/c-75"
+                    className="w-full"
                   >
-                    Lihat Detail
-                  </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    >
+                      Lihat Detail
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
 
             {/* C Vent C-105 */}
             <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full relative">
-                <div className="absolute top-4 right-4 z-10">
-                  <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white text-xs px-2 py-1 rounded-full font-medium">
-                    Premium
-                  </div>
-                </div>
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-700">
-                      <div className="text-6xl mb-2">👑</div>
-                      <p className="text-sm font-medium">C-105 (42")</p>
-                    </div>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/b0b48871-0303-43c8-b081-e50a6074db32.png"
+                    alt="C VENT TYPE C-105 (42 inch) - Turbine Ventilator C Vent"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
                 </div>
                 <CardContent className="p-6 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      C Vent Type C-105
+                      C VENT TYPE C-105 (42")
                     </h3>
-                    <p className="text-neutral-600 mb-4 leading-relaxed">
-                      Kapasitas terbesar dengan bearing SKF premium untuk industri berat
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
-                      <div className="text-center p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded border border-primary/20">
-                        <div className="font-bold text-primary">267,87 m³</div>
-                        <div className="text-neutral-600">per menit</div>
-                      </div>
-                      <div className="text-center p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded border border-primary/20">
-                        <div className="font-bold text-primary">SKF</div>
-                        <div className="text-neutral-600">bearing</div>
+                    <div className="space-y-2 text-sm text-neutral-600 mb-4">
+                      <div><span className="font-medium">Bahan:</span> Alluminium dan Stainless Steel</div>
+                      <div><span className="font-medium">Bearing:</span> SKF Full Stainless Steel, Made In Japan</div>
+                      <div><span className="font-medium">Diameter:</span> 105 CM = 42"</div>
+                      <div><span className="font-medium">Dimensi:</span> 147 x 134 x 134</div>
+                      <div><span className="font-medium">Berat:</span> 25 kg s/d 32 kg</div>
+                      <div className="text-lg font-medium text-primary">
+                        <span className="font-medium text-neutral-600 text-sm">Kapasitas Hisap:</span> 267,87 M³ / menit
                       </div>
                     </div>
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  <Link 
+                    to="/produk/c-105"
+                    className="w-full"
                   >
-                    Lihat Detail
-                  </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    >
+                      Lihat Detail
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" className="px-12 py-4 text-lg">
-              Lihat Semua Produk →
-            </Button>
+            <Link to="/produk">
+              <Button size="lg" className="px-12 py-4 text-lg">
+                Lihat Semua Produk →
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
