@@ -9,31 +9,53 @@ export default function Produk() {
   const products = [
     {
       id: 'c-45',
-      name: 'C Vent Type C-45',
-      size: '18"',
-      capacity: '1,200 m³/jam',
-      description: 'Ideal untuk ruangan kecil hingga menengah'
+      name: 'C VENT TYPE C-45 (18")',
+      material: 'Alluminium dan Stainless Steel',
+      bearing: 'Full Stainless Steel, Made In Japan',
+      diameter: '45 CM = 18"',
+      dimension: '75 x 68 x 68',
+      weight: '6 kg s/d 8,5 kg',
+      capacity: '62,47 M³ / menit'
     },
     {
       id: 'c-60',
-      name: 'C Vent Type C-60',
-      size: '24"',
-      capacity: '2,200 m³/jam',
-      description: 'Cocok untuk ruangan menengah dan perkantoran'
+      name: 'C VENT TYPE C-60 (24")',
+      material: 'Alluminium dan Stainless Steel',
+      bearing: 'Full Stainless Steel, Made In Japan',
+      diameter: '60 CM = 24"',
+      dimension: '100 x 86 x 86',
+      weight: '8,5 kg s/d 13,5 kg',
+      capacity: '108,79 M³ / menit'
+    },
+    {
+      id: 'c-75',
+      name: 'C VENT TYPE C-75 (30")',
+      material: 'Alluminium dan Stainless Steel',
+      bearing: 'FBJ Made in Japan Full Steinless Steel = 3pc',
+      diameter: '75 CM = 30"',
+      dimension: '120 x 100 x 100',
+      weight: '14,5 kg s/d 21,5 kg',
+      capacity: '157,95 M³ / menit'
     },
     {
       id: 'c-90',
-      name: 'C Vent Type C-90',
-      size: '36"',
-      capacity: '4,800 m³/jam',
-      description: 'Untuk gudang besar dan fasilitas industri'
+      name: 'C VENT TYPE C-90 (36")',
+      material: 'Alluminium dan Stainless Steel',
+      bearing: 'Made in Japan Full Steinless Steel = 3pc',
+      diameter: '90 CM = 36"',
+      dimension: '147 x 117 x 117',
+      weight: '21,5 kg',
+      capacity: '225,79 M³ / menit'
     },
     {
       id: 'c-105',
-      name: 'C Vent Type C-105',
-      size: '42"',
-      capacity: '6,500 m³/jam',
-      description: 'Kapasitas maksimal untuk industri berat'
+      name: 'C VENT TYPE C-105 (42")',
+      material: 'Alluminium dan Stainless Steel',
+      bearing: 'SKF Full Stainless Steel, Made In Japan',
+      diameter: '105 CM = 42"',
+      dimension: '147 x 134 x 134',
+      weight: '25 kg s/d 32 kg',
+      capacity: '267,87 M³ / menit'
     }
   ];
 
@@ -61,7 +83,7 @@ export default function Produk() {
               Pilihan Ukuran C Vent
             </h2>
             <p className="text-lg text-neutral-600">
-              Tersedia 4 ukuran standar untuk berbagai kebutuhan bangunan
+              Tersedia 5 ukuran standar untuk berbagai kebutuhan bangunan
             </p>
           </div>
 
@@ -74,6 +96,7 @@ export default function Produk() {
                       src={`/lovable-uploads/${
                         product.id === 'c-45' ? '06dff626-e6b9-44fc-8c2d-90a3b633e315.png' :
                         product.id === 'c-60' ? '9bca9c73-a575-447e-9cc5-85103706559c.png' :
+                        product.id === 'c-75' ? '06dff626-e6b9-44fc-8c2d-90a3b633e315.png' :
                         product.id === 'c-90' ? 'f1b0b239-cc0e-4006-adac-f4e1894d144b.png' :
                         'b0b48871-0303-43c8-b081-e50a6074db32.png'
                       }`}
@@ -84,15 +107,19 @@ export default function Produk() {
                   </div>
                   <CardContent className="p-6 flex flex-col justify-between flex-grow">
                     <div>
-                      <h3 className="text-xl font-semibold text-neutral-900 mb-2 transition-colors duration-300 group-hover:text-primary">
+                      <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
                         {product.name}
                       </h3>
-                      <div className="text-lg font-medium text-primary mb-2">
-                        Kapasitas: {product.capacity}
+                      <div className="space-y-2 text-sm text-neutral-600 mb-4">
+                        <div><span className="font-medium">Bahan:</span> {product.material}</div>
+                        <div><span className="font-medium">Bearing:</span> {product.bearing}</div>
+                        <div><span className="font-medium">Diameter:</span> {product.diameter}</div>
+                        <div><span className="font-medium">Dimensi:</span> {product.dimension}</div>
+                        <div><span className="font-medium">Berat:</span> {product.weight}</div>
+                        <div className="text-lg font-medium text-primary">
+                          <span className="font-medium text-neutral-600 text-sm">Kapasitas Hisap:</span> {product.capacity}
+                        </div>
                       </div>
-                      <p className="text-neutral-600 mb-4 leading-relaxed text-sm">
-                        {product.description}
-                      </p>
                     </div>
                     <Link 
                       to={`/produk/${product.id}`}
@@ -113,89 +140,6 @@ export default function Produk() {
         </div>
       </section>
 
-      {/* Accessories & Spareparts */}
-      <section className="py-20 px-6 bg-neutral-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-6">
-              Aksesoris & Sparepart
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Komponen pendukung dan sparepart berkualitas untuk instalasi dan perawatan C Vent
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Accessories Card */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
-                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-500">
-                      <Wrench className="w-16 h-16 mb-4 mx-auto" />
-                      <p className="text-sm font-medium">Aksesoris Instalasi</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      Aksesoris Instalasi
-                    </h3>
-                    <ul className="text-neutral-600 mb-4 leading-relaxed text-sm space-y-1">
-                      <li>• Base ridge/slope/curb</li>
-                      <li>• Flashing waterproofing</li>
-                      <li>• Jaring anti serangga</li>
-                      <li>• Ducting connector</li>
-                    </ul>
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                  >
-                    Lihat Detail
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Spareparts Card */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
-                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-500">
-                      <div className="text-6xl mb-2">🔧</div>
-                      <p className="text-sm font-medium">Sparepart & Service</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      Sparepart & Service
-                    </h3>
-                    <ul className="text-neutral-600 mb-4 leading-relaxed text-sm space-y-1">
-                      <li>• Bearing Jepang original</li>
-                      <li>• Baling-baling presisi</li>
-                      <li>• Crown & body replacement</li>
-                      <li>• Service & maintenance</li>
-                    </ul>
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                  >
-                    Lihat Detail
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Product Features */}
       <section className="py-20 px-6 bg-white">

@@ -4,6 +4,7 @@ import TentangKami from "./pages/TentangKami";
 import Produk from "./pages/Produk";
 import ProductC45 from "./pages/ProductC45";
 import ProductC60 from "./pages/ProductC60";
+import ProductC75 from "./pages/ProductC75";
 import ProductC90 from "./pages/ProductC90";
 import ProductC105 from "./pages/ProductC105";
 import Galeri from "./pages/Galeri";
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/produk" element={<Produk />} />
       <Route path="/produk/c-45" element={<ProductC45 />} />
       <Route path="/produk/c-60" element={<ProductC60 />} />
+      <Route path="/produk/c-75" element={<ProductC75 />} />
       <Route path="/produk/c-90" element={<ProductC90 />} />
       <Route path="/produk/c-105" element={<ProductC105 />} />
       <Route path="/galeri" element={<Galeri />} />
