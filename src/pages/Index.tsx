@@ -141,6 +141,48 @@ export default function Index() {
               </Card>
             </div>
 
+            {/* C Vent C-60 */}
+            <div className="group">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
+                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                  <img 
+                    src="/lovable-uploads/9bca9c73-a575-447e-9cc5-85103706559c.png"
+                    alt="C VENT TYPE C-60 (24 inch) - Turbine Ventilator C Vent"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
+                </div>
+                <CardContent className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
+                      C VENT TYPE C-60 (24")
+                    </h3>
+                    <div className="space-y-2 text-sm text-neutral-600 mb-4">
+                      <div><span className="font-medium">Bahan:</span> Alluminium dan Stainless Steel</div>
+                      <div><span className="font-medium">Bearing:</span> Full Stainless Steel, Made In Japan</div>
+                      <div><span className="font-medium">Diameter:</span> 60 CM = 24"</div>
+                      <div><span className="font-medium">Dimensi:</span> 100 x 86 x 86</div>
+                      <div><span className="font-medium">Berat:</span> 8,5 kg s/d 13,5 kg</div>
+                      <div className="text-lg font-medium text-primary">
+                        <span className="font-medium text-neutral-600 text-sm">Kapasitas Hisap:</span> 108,79 M³ / menit
+                      </div>
+                    </div>
+                  </div>
+                  <Link 
+                    to="/produk/c-60"
+                    className="w-full"
+                  >
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    >
+                      Lihat Detail
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* C Vent C-75 */}
             <div className="group">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
@@ -170,48 +212,6 @@ export default function Index() {
                   </div>
                   <Link 
                     to="/produk/c-75"
-                    className="w-full"
-                  >
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                    >
-                      Lihat Detail
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* C Vent C-105 */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
-                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <img 
-                    src="/lovable-uploads/b0b48871-0303-43c8-b081-e50a6074db32.png"
-                    alt="C VENT TYPE C-105 (42 inch) - Turbine Ventilator C Vent"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
-                </div>
-                <CardContent className="p-6 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      C VENT TYPE C-105 (42")
-                    </h3>
-                    <div className="space-y-2 text-sm text-neutral-600 mb-4">
-                      <div><span className="font-medium">Bahan:</span> Alluminium dan Stainless Steel</div>
-                      <div><span className="font-medium">Bearing:</span> SKF Full Stainless Steel, Made In Japan</div>
-                      <div><span className="font-medium">Diameter:</span> 105 CM = 42"</div>
-                      <div><span className="font-medium">Dimensi:</span> 147 x 134 x 134</div>
-                      <div><span className="font-medium">Berat:</span> 25 kg s/d 32 kg</div>
-                      <div className="text-lg font-medium text-primary">
-                        <span className="font-medium text-neutral-600 text-sm">Kapasitas Hisap:</span> 267,87 M³ / menit
-                      </div>
-                    </div>
-                  </div>
-                  <Link 
-                    to="/produk/c-105"
                     className="w-full"
                   >
                     <Button 
