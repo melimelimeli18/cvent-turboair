@@ -237,7 +237,7 @@ export default function TentangKami() {
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-medium">C Vent</p>
+                          <p className="font-medium">Kantor Pusat</p>
                           <p>Jl. Raya Bekasi Timur KM 17 No.6</p>
                         </div>
                       </div>
@@ -250,6 +250,7 @@ export default function TentangKami() {
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                         <div>
+                          <p className="font-medium">Cabang Jakarta Timur</p>
                           <p>Jl. Raya Bekasi Blok KM No.18 RT.1/RW.3</p>
                           <p>Jatinegara, Kec. Cakung, Kota Jakarta Timur</p>
                           <p>Daerah Khusus Ibukota Jakarta</p>
@@ -264,6 +265,7 @@ export default function TentangKami() {
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                         <div>
+                          <p className="font-medium">Cabang Bekasi Selatan</p>
                           <p>Jl. Raya Pekayon, Komplek Griya Cendana 4 No.17</p>
                           <p>Bekasi Selatan</p>
                         </div>

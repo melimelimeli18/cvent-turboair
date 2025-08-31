@@ -98,57 +98,36 @@ export default function Index() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* C Vent Aluminium Series */}
+            {/* C Vent C-45 */}
             <div className="group">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-500">
-                      <div className="text-6xl mb-2">📐</div>
-                      <p className="text-sm">Aluminium Series</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      C Vent Aluminium Series
-                    </h3>
-                    <p className="text-neutral-600 mb-4 leading-relaxed">
-                      Ringan, tahan karat, dan lebih ekonomis dengan pilihan ukuran 18", 24", 30", 36", 42"
-                    </p>
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                  >
-                    Lihat Detail
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* C Vent Stainless Steel Series */}
-            <div className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
-                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-500">
+                    <div className="text-center text-neutral-700">
                       <div className="text-6xl mb-2">⚡</div>
-                      <p className="text-sm">Stainless Steel Series</p>
+                      <p className="text-sm font-medium">C-45 (18")</p>
                     </div>
                   </div>
                 </div>
                 <CardContent className="p-6 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      C Vent Stainless Steel Series
+                      C Vent Type C-45
                     </h3>
                     <p className="text-neutral-600 mb-4 leading-relaxed">
-                      Kokoh, premium, dan umur pakai lebih panjang untuk kebutuhan industri berat
+                      Ringan dan tahan karat, cocok untuk bangunan kecil hingga menengah
                     </p>
+                    <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
+                      <div className="text-center p-2 bg-neutral-50 rounded">
+                        <div className="font-bold text-primary">62,47 m³</div>
+                        <div className="text-neutral-600">per menit</div>
+                      </div>
+                      <div className="text-center p-2 bg-neutral-50 rounded">
+                        <div className="font-bold text-primary">6-8,5 kg</div>
+                        <div className="text-neutral-600">berat</div>
+                      </div>
+                    </div>
                   </div>
                   <Button 
                     variant="outline" 
@@ -160,26 +139,36 @@ export default function Index() {
               </Card>
             </div>
 
-            {/* Aksesoris & Sparepart */}
+            {/* C Vent C-75 */}
             <div className="group">
               <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
                   <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-neutral-500">
-                      <div className="text-6xl mb-2">🔧</div>
-                      <p className="text-sm">Accessories & Parts</p>
+                    <div className="text-center text-neutral-700">
+                      <div className="text-6xl mb-2">🔥</div>
+                      <p className="text-sm font-medium">C-75 (30")</p>
                     </div>
                   </div>
                 </div>
                 <CardContent className="p-6 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
-                      Aksesoris & Sparepart
+                      C Vent Type C-75
                     </h3>
                     <p className="text-neutral-600 mb-4 leading-relaxed">
-                      Base ridge, slope, curb, flashing, jaring anti serangga dan komponen pendukung lainnya
+                      Kapasitas sedang-tinggi untuk bangunan komersial dan industri menengah
                     </p>
+                    <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
+                      <div className="text-center p-2 bg-neutral-50 rounded">
+                        <div className="font-bold text-primary">157,95 m³</div>
+                        <div className="text-neutral-600">per menit</div>
+                      </div>
+                      <div className="text-center p-2 bg-neutral-50 rounded">
+                        <div className="font-bold text-primary">FBJ Japan</div>
+                        <div className="text-neutral-600">bearing</div>
+                      </div>
+                    </div>
                   </div>
                   <Button 
                     variant="outline" 
@@ -190,6 +179,58 @@ export default function Index() {
                 </CardContent>
               </Card>
             </div>
+
+            {/* C Vent C-105 */}
+            <div className="group">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white rounded-xl h-full relative">
+                <div className="absolute top-4 right-4 z-10">
+                  <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    Premium
+                  </div>
+                </div>
+                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                  <div className="absolute inset-0 bg-primary/30 transition-opacity duration-300 group-hover:bg-primary/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-neutral-700">
+                      <div className="text-6xl mb-2">👑</div>
+                      <p className="text-sm font-medium">C-105 (42")</p>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors duration-300 group-hover:text-primary">
+                      C Vent Type C-105
+                    </h3>
+                    <p className="text-neutral-600 mb-4 leading-relaxed">
+                      Kapasitas terbesar dengan bearing SKF premium untuk industri berat
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
+                      <div className="text-center p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded border border-primary/20">
+                        <div className="font-bold text-primary">267,87 m³</div>
+                        <div className="text-neutral-600">per menit</div>
+                      </div>
+                      <div className="text-center p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded border border-primary/20">
+                        <div className="font-bold text-primary">SKF</div>
+                        <div className="text-neutral-600">bearing</div>
+                      </div>
+                    </div>
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    Lihat Detail
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" className="px-12 py-4 text-lg">
+              Lihat Semua Produk →
+            </Button>
           </div>
         </div>
       </section>
