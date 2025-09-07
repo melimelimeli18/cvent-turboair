@@ -22,15 +22,20 @@ export default function Index() {
               Solusi ventilasi alami tanpa listrik, bergaransi hingga 10 tahun
             </p>
             <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-12 py-4 rounded-full bg-primary text-white hover:bg-primary/90">
+              <Button 
+                size="lg" 
+                className="text-lg px-12 py-4 rounded-full bg-primary text-white hover:bg-primary/90"
+                onClick={() => document.getElementById('products-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Lihat Produk →
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="text-lg px-12 py-4 rounded-full border-primary text-primary hover:bg-primary hover:text-white"
+                asChild
               >
-                Hubungi Kami
+                <Link to="/kontak">Hubungi Kami</Link>
               </Button>
             </div>
           </div>
@@ -87,7 +92,7 @@ export default function Index() {
       </section>
 
       {/* All Products */}
-      <section className="py-20 px-6 bg-neutral-50">
+      <section id="products-section" className="py-20 px-6 bg-neutral-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-neutral-900 mb-6">
