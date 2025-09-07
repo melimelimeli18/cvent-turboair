@@ -33,7 +33,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Link Cepat</h4>
+            <h4 className="text-lg font-semibold mb-4">Halaman</h4>
             <div className="space-y-2 text-primary-foreground/70">
               <Link to="/" className="block hover:text-white transition-colors">Beranda</Link>
               <Link to="/tentang-kami" className="block hover:text-white transition-colors">Tentang Kami</Link>
@@ -51,15 +51,11 @@ export const Footer = () => {
             <div className="space-y-3 text-primary-foreground/70">
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>+62 21 1234 5678</span>
+                <span>62+ 8121 0017 168</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>info@cvent.co.id</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone size={16} />
-                <span>Sales: +62 812 3456 7890</span>
+                <span>cvent.ventilator@gmail.com</span>
               </div>
             </div>
           </div>

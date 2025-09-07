@@ -348,8 +348,9 @@ export default function Index() {
             variant="outline" 
             size="lg" 
             className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+            asChild
           >
-            Minta Penawaran →
+            <Link to="/kontak">Minta Penawaran →</Link>
           </Button>
         </div>
       </section>

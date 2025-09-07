@@ -6,7 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function Kontak() {
   return (
@@ -38,8 +39,8 @@ export default function Kontak() {
                       <Input id="company" placeholder="PT/CV Nama Perusahaan" />
                     </div>
                     <div>
-                      <Label htmlFor="pic">PIC (Person in Charge) *</Label>
-                      <Input id="pic" placeholder="Nama lengkap PIC" />
+                      <Label htmlFor="pic">Nama Penanggung Jawab *</Label>
+                      <Input id="pic" placeholder="Nama Lengkap" />
                     </div>
                   </div>
                   
@@ -112,10 +113,12 @@ export default function Kontak() {
                         <MessageCircle className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
-                        <p className="font-medium">Mobile / WhatsApp</p>
-                        <p className="text-muted-foreground">0812 100 17 168</p>
-                        <Button variant="outline" size="sm" className="mt-2">
-                          Chat WhatsApp
+                        <p className="font-medium">No Telepon / WhatsApp</p>
+                        <p className="text-muted-foreground">62+ 8121 0017 168</p>
+                        <Button variant="outline" size="sm" className="mt-2" asChild>
+                          <a href="https://wa.me/6281210017168?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20turbin%20ventilator%20dari%20Cvent.%20Bisa%20dibantu%20berikan%20informasi%20lebih%20lanjut%3F" target="_blank" rel="noopener noreferrer">
+                            Chat WhatsApp
+                          </a>
                         </Button>
                       </div>
                     </div>
@@ -127,16 +130,6 @@ export default function Kontak() {
                       <div>
                         <p className="font-medium">Email</p>
                         <p className="text-muted-foreground">cvent.ventilator@gmail.com</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Phone className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium">Website</p>
-                        <p className="text-muted-foreground">turbineventilator.co.id</p>
                       </div>
                     </div>
                   </div>

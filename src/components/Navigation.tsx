@@ -47,8 +47,8 @@ export const Navigation = ({ isDark = false }: { isDark?: boolean }) => {
         </div>
 
         <div className="hidden lg:block">
-          <Button variant={isDark ? "hero-outline" : "default"} size="sm">
-            Konsultasi Gratis
+          <Button variant={isDark ? "hero-outline" : "default"} size="sm" asChild>
+            <Link to="/kontak">Konsultasi Gratis</Link>
           </Button>
         </div>
 
@@ -78,8 +78,8 @@ export const Navigation = ({ isDark = false }: { isDark?: boolean }) => {
               </Link>
             ))}
             <div className="pt-4">
-              <Button variant="default" size="sm" className="w-full">
-                Konsultasi Gratis
+              <Button variant="default" size="sm" className="w-full" asChild>
+                <Link to="/kontak">Konsultasi Gratis</Link>
               </Button>
             </div>
           </div>
