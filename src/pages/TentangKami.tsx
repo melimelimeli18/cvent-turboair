@@ -232,42 +232,15 @@ export default function TentangKami() {
               <Card className="p-8 border-0 shadow-lg">
                 <CardContent className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Kantor Pusat</h3>
+                    <h3 className="text-xl font-semibold mb-4">Kantor C Vent</h3>
                     <div className="space-y-3 text-muted-foreground">
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-medium">Kantor Pusat</p>
-                          <p>Jl. Raya Bekasi Timur KM 17 No.6</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Cabang Jakarta Timur</h3>
-                    <div className="space-y-3 text-muted-foreground">
-                      <div className="flex items-start gap-3">
-                        <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium">Cabang Jakarta Timur</p>
-                          <p>Jl. Raya Bekasi Blok KM No.18 RT.1/RW.3</p>
+                          <p className="font-medium">Alamat Kantor</p>
+                          <p>Jl. Raya Bekasi Blok KM No.18, RT.1/RW.3</p>
                           <p>Jatinegara, Kec. Cakung, Kota Jakarta Timur</p>
-                          <p>Daerah Khusus Ibukota Jakarta</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Cabang Bekasi Selatan</h3>
-                    <div className="space-y-3 text-muted-foreground">
-                      <div className="flex items-start gap-3">
-                        <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium">Cabang Bekasi Selatan</p>
-                          <p>Jl. Raya Pekayon, Komplek Griya Cendana 4 No.17</p>
-                          <p>Bekasi Selatan</p>
+                          <p>Daerah Khusus Ibukota Jakarta 13930</p>
                         </div>
                       </div>
                     </div>

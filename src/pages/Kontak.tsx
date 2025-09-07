@@ -152,31 +152,10 @@ export default function Kontak() {
                         <MapPin className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Kantor Pusat</p>
-                        <p className="text-muted-foreground">Jl. Raya Bekasi Timur KM 17 No.6</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium">Cabang Jakarta Timur</p>
-                        <p className="text-muted-foreground">Jl. Raya Bekasi Blok KM No.18 RT.1/RW.3</p>
+                        <p className="font-medium">Kantor C Vent</p>
+                        <p className="text-muted-foreground">Jl. Raya Bekasi Blok KM No.18, RT.1/RW.3</p>
                         <p className="text-muted-foreground">Jatinegara, Kec. Cakung, Kota Jakarta Timur</p>
-                        <p className="text-muted-foreground">Daerah Khusus Ibukota Jakarta</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium">Cabang Bekasi Selatan</p>
-                        <p className="text-muted-foreground">Jl. Raya Pekayon, Komplek Griya Cendana 4 No.17</p>
-                        <p className="text-muted-foreground">Bekasi Selatan</p>
+                        <p className="text-muted-foreground">Daerah Khusus Ibukota Jakarta 13930</p>
                       </div>
                     </div>
                   </div>
