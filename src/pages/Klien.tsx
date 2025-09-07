@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
 
 export default function Klien() {
   const clientLogos = [
@@ -126,8 +127,12 @@ export default function Klien() {
                   borderRadius: '8px'
                 }}
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400 text-xs">LOGO</span>
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, starIndex) => (
+                      <Star key={starIndex} size={12} fill="#FFD700" color="#FFD700" />
+                    ))}
+                  </div>
                 </div>
                 <h3 className="font-semibold text-sm mb-2" style={{ color: '#222222' }}>
                   {client.nama}
