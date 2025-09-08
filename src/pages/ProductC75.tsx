@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Wind, Wrench, Thermometer, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ProductC75() {
   return (
@@ -34,11 +35,11 @@ export default function ProductC75() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="px-8">
-                  Minta Penawaran
+                <Button size="lg" className="px-8" asChild>
+                  <Link to="/kontak">Minta Penawaran</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="px-8">
-                  Konsultasi Gratis
+                <Button variant="outline" size="lg" className="px-8" asChild>
+                  <Link to="/kontak">Konsultasi Gratis</Link>
                 </Button>
               </div>
             </div>
@@ -257,15 +258,17 @@ export default function ProductC75() {
               variant="outline" 
               size="lg" 
               className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+              asChild
             >
-              Minta Penawaran Sekarang
+              <Link to="/kontak">Minta Penawaran Sekarang</Link>
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+              asChild
             >
-              WhatsApp Konsultasi
+              <Link to="/kontak">WhatsApp Konsultasi</Link>
             </Button>
           </div>
         </div>

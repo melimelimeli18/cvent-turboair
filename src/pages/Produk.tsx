@@ -200,15 +200,17 @@ export default function Produk() {
               variant="outline" 
               size="lg" 
               className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+              asChild
             >
-              Minta Penawaran →
+              <Link to="/kontak">Minta Penawaran →</Link>
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="text-lg px-12 py-4 rounded-full border-white text-white hover:bg-white hover:text-primary"
+              asChild
             >
-              Konsultasi Gratis
+              <Link to="/kontak">Konsultasi Gratis</Link>
             </Button>
           </div>
         </div>

@@ -82,15 +82,16 @@ export default function ProductC90() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
-                  Minta Penawaran
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90" asChild>
+                  <Link to="/kontak">Minta Penawaran</Link>
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="border-primary text-primary hover:bg-primary hover:text-white"
+                  asChild
                 >
-                  Hubungi Kami
+                  <Link to="/kontak">Hubungi Kami</Link>
                 </Button>
               </div>
             </div>
@@ -221,15 +222,17 @@ export default function ProductC90() {
               variant="outline" 
               size="lg"
               className="border-white text-white hover:bg-white hover:text-primary"
+              asChild
             >
-              Minta Penawaran Sekarang
+              <Link to="/kontak">Minta Penawaran Sekarang</Link>
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               className="border-white text-white hover:bg-white hover:text-primary"
+              asChild
             >
-              Konsultasi Gratis
+              <Link to="/kontak">Konsultasi Gratis</Link>
             </Button>
           </div>
         </div>
