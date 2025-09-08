@@ -42,13 +42,68 @@ export default function BlogDetail() {
           </header>
 
           <div className="prose prose-lg max-w-none">
-            <p>Dalam dunia industri modern, pemilihan sistem ventilasi yang tepat dapat memberikan dampak signifikan terhadap efisiensi operasional dan biaya jangka panjang...</p>
+            <p>
+              Mengatur sirkulasi udara di dalam pabrik bukan sekadar soal kenyamanan, tapi juga menyangkut keselamatan kerja dan 
+              kelancaran produksi. Udara panas, lembap, dan berdebu bisa bikin pekerja cepat lelah, mesin gampang rusak, bahkan mengurangi produktivitas. Nah, dua solusi yang paling sering digunakan adalah turbine ventilator dan exhaust fan.
+            </p>
             
-            <h2>Perbandingan Biaya Operasional</h2>
-            <p>Turbine ventilator beroperasi tanpa listrik, sementara exhaust fan membutuhkan energi listrik kontinyu...</p>
+            <p>
+              Keduanya sama-sama berfungsi untuk mengeluarkan udara kotor dari dalam ruangan, tapi cara kerja dan efisiensinya cukup berbeda. Jadi, mana yang lebih pas untuk pabrik Anda? Yuk kita bahas!
+            </p>
             
-            <h2>Analisis ROI</h2>
-            <p>Berdasarkan data dari 100+ instalasi C Vent, rata-rata ROI tercapai dalam 12-18 bulan...</p>
+            <h2>Apa Itu Turbine Ventilator?</h2>
+            <p>
+              Bayangkan baling-baling di atas atap yang berputar setiap kali angin bertiup—itulah turbine ventilator. Alat ini bekerja memanfaatkan energi alami, yaitu angin dan perbedaan tekanan udara. Begitu berputar, udara panas di dalam pabrik ditarik keluar tanpa perlu listrik sama sekali. Hemat energi, ramah lingkungan, dan minim perawatan.
+            </p>
+            
+            <h2>Apa Itu Exhaust Fan?</h2>
+            <p>
+              Kalau turbine ventilator mengandalkan angin, exhaust fan justru menggunakan motor listrik. Bentuknya mirip kipas besar yang dipasang di dinding atau atap pabrik. Dengan tenaga listrik, exhaust fan bisa mengisap udara panas dan menggantinya dengan udara segar secara konsisten, tanpa peduli ada angin atau tidak.
+            </p>
+            
+            <h2>Perbandingan Turbine Ventilator dan Exhaust Fan</h2>
+            <div className="overflow-x-auto my-8">
+              <table className="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Aspek</th>
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Turbine Ventilator</th>
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Exhaust Fan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 font-medium">Energi</td>
+                    <td className="border border-gray-300 px-4 py-3">Tidak pakai listrik (hemat biaya)</td>
+                    <td className="border border-gray-300 px-4 py-3">Butuh listrik (biaya operasional naik)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3 font-medium">Performa</td>
+                    <td className="border border-gray-300 px-4 py-3">Bergantung pada angin</td>
+                    <td className="border border-gray-300 px-4 py-3">Stabil sepanjang waktu</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 font-medium">Perawatan</td>
+                    <td className="border border-gray-300 px-4 py-3">Hampir tanpa perawatan</td>
+                    <td className="border border-gray-300 px-4 py-3">Perlu rutin cek motor & baling-baling</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3 font-medium">Kebisingan</td>
+                    <td className="border border-gray-300 px-4 py-3">Hampir tidak ada suara</td>
+                    <td className="border border-gray-300 px-4 py-3">Bisa cukup berisik</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 font-medium">Kesesuaian</td>
+                    <td className="border border-gray-300 px-4 py-3">Cocok untuk atap pabrik luas</td>
+                    <td className="border border-gray-300 px-4 py-3">Cocok untuk area dengan panas tinggi</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <p>
+              Baik turbine ventilator maupun exhaust fan punya keunggulan masing-masing. Yang terpenting adalah menyesuaikan dengan kondisi pabrik, kebutuhan produksi, dan anggaran operasional. Dengan sistem ventilasi yang tepat, pabrik tidak hanya jadi lebih nyaman, tapi juga lebih efisien dan produktif.
+            </p>
           </div>
         </div>
       </article>
