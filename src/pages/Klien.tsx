@@ -165,17 +165,10 @@ export default function Klien() {
             Konsultasi gratis untuk mengetahui potensi penghematan di gedung Anda
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero-outline" size="lg" className="px-12">
-              Konsultasi Gratis Sekarang
+          <div className="flex justify-center">
+            <Button variant="hero-outline" size="lg" className="px-12" asChild>
+              <a href="/kontak">Konsultasi Gratis Sekarang</a>
             </Button>
-            <Button variant="hero-outline" size="lg" className="px-12">
-              Minta Studi Kelayakan
-            </Button>
-          </div>
-          
-          <div className="mt-8 text-sm text-primary-foreground/70">
-            <p>Analisis ROI dan potensi penghematan tersedia gratis untuk semua calon klien</p>
           </div>
         </div>
       </section>

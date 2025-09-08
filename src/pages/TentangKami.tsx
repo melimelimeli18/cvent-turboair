@@ -186,9 +186,9 @@ export default function TentangKami() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <CheckCircle className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">Garansi Resmi</h3>
+                <h3 className="text-xl font-semibold">Kenapa Harus C Vent?</h3>
                 <p className="text-muted-foreground">
-                  Garansi hingga 5 tahun untuk material dan 2 tahun untuk instalasi
+                  C Vent Mengutamakan kualitas diproduksi hanya menggunakan bahan material pilihan dengan kualitas terbaik yang membedakan dengan merk ventilator lainnya. Ditambah garansi hingga 10 tahun bila terdapat cacat dalam pemasangan, plus garansi sparepart selama tiga tahun.
                 </p>
               </CardContent>
             </Card>
@@ -303,8 +303,8 @@ export default function TentangKami() {
           </div>
           
           <div className="mt-12">
-            <Button variant="hero-outline" size="lg" className="px-12">
-              Konsultasi dengan Tim Ahli
+            <Button variant="hero-outline" size="lg" className="px-12" asChild>
+              <a href="/kontak">Konsultasi dengan Tim Ahli</a>
             </Button>
           </div>
         </div>
