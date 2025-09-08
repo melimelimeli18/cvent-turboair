@@ -51,7 +51,7 @@ export default function BlogDetail() {
               Keduanya sama-sama berfungsi untuk mengeluarkan udara kotor dari dalam ruangan, tapi cara kerja dan efisiensinya cukup berbeda. Jadi, mana yang lebih pas untuk pabrik Anda? Yuk kita bahas!
             </p>
             
-            <h2>Apa Itu Turbine Ventilator?</h2>
+            <h3>Apa Itu Turbine Ventilator?</h3>
             <p>
               Bayangkan baling-baling di atas atap yang berputar setiap kali angin bertiup—itulah turbine ventilator. Alat ini bekerja memanfaatkan energi alami, yaitu angin dan perbedaan tekanan udara. Begitu berputar, udara panas di dalam pabrik ditarik keluar tanpa perlu listrik sama sekali. Hemat energi, ramah lingkungan, dan minim perawatan.
             </p>
