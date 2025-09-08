@@ -40,7 +40,7 @@ export const Footer = () => {
               <Link to="/produk" className="block hover:text-white transition-colors">Produk</Link>
               
               <Link to="/klien" className="block hover:text-white transition-colors">Klien</Link>
-              <Link to="/blog" className="block hover:text-white transition-colors">Blog</Link>
+              
               <Link to="/kontak" className="block hover:text-white transition-colors">Kontak</Link>
             </div>
           </div>

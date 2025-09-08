@@ -13,7 +13,7 @@ export const Navigation = ({ isDark = false }: { isDark?: boolean }) => {
     { href: "/produk", label: "Produk" },
     // { href: "/galeri", label: "Galeri" }, // Temporarily hidden
     { href: "/klien", label: "Klien" },
-    { href: "/blog", label: "Blog" },
+    // { href: "/blog", label: "Blog" }, // Hidden
     { href: "/kontak", label: "Kontak" },
   ];
 
