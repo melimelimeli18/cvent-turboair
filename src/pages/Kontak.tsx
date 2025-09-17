@@ -8,8 +8,139 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { toast } from "@/components/ui/use-toast";
+
+interface FormData {
+  company: string;
+  pic: string;
+  email: string;
+  phone: string;
+  location: string;
+  buildingType: string;
+  roofArea: string;
+  message: string;
+}
 
 export default function Kontak() {
+  const [formData, setFormData] = useState<FormData>({
+    company: '',
+    pic: '',
+    email: '',
+    phone: '',
+    location: '',
+    buildingType: '',
+    roofArea: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      buildingType: value
+    }));
+  };
+
+  const getBuildingTypeLabel = (value: string): string => {
+    const buildingTypes: { [key: string]: string } = {
+      'pabrik': 'Pabrik/Industri',
+      'gudang': 'Gudang/Warehouse',
+      'office': 'Perkantoran',
+      'retail': 'Retail/Mall',
+      'restaurant': 'Restoran/F&B',
+      'sport': 'Gedung Olahraga',
+      'education': 'Sekolah/Universitas',
+      'healthcare': 'Rumah Sakit/Klinik',
+      'religious': 'Tempat Ibadah',
+      'other': 'Lainnya'
+    };
+    return buildingTypes[value] || value;
+  };
+
+  const validateForm = (): boolean => {
+    const requiredFields = ['company', 'pic', 'email', 'phone', 'location', 'buildingType'];
+    const emptyFields = requiredFields.filter(field => !formData[field as keyof FormData]);
+    
+    if (emptyFields.length > 0) {
+      toast({
+        title: "Form tidak lengkap",
+        description: "Mohon isi semua field yang wajib (*)",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Email tidak valid",
+        description: "Mohon masukkan format email yang benar",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Berhasil terkirim!",
+          description: "Permintaan konsultasi Anda telah terkirim. Tim kami akan menghubungi Anda segera.",
+        });
+        
+        // Reset form
+        setFormData({
+          company: '',
+          pic: '',
+          email: '',
+          phone: '',
+          location: '',
+          buildingType: '',
+          roofArea: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Gagal mengirim",
+        description: "Terjadi kesalahan saat mengirim permintaan. Silakan coba lagi atau hubungi kami langsung.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -32,37 +163,68 @@ export default function Kontak() {
             <Card className="border-0 shadow-xl">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-semibold mb-6">Form Konsultasi</h2>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="company">Nama Perusahaan *</Label>
-                      <Input id="company" placeholder="PT/CV Nama Perusahaan" />
+                      <Input 
+                        id="company" 
+                        placeholder="PT/CV Nama Perusahaan"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        required
+                      />
                     </div>
                     <div>
                       <Label htmlFor="pic">Nama Penanggung Jawab *</Label>
-                      <Input id="pic" placeholder="Nama Lengkap" />
+                      <Input 
+                        id="pic" 
+                        placeholder="Nama Lengkap"
+                        value={formData.pic}
+                        onChange={handleInputChange}
+                        required
+                      />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="email">Email *</Label>
-                      <Input id="email" type="email" placeholder="email@perusahaan.com" />
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="email@perusahaan.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
                     </div>
                     <div>
                       <Label htmlFor="phone">Telepon/WhatsApp *</Label>
-                      <Input id="phone" placeholder="+62 812 xxxx xxxx" />
+                      <Input 
+                        id="phone" 
+                        placeholder="+62 812 xxxx xxxx"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                      />
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="location">Lokasi Proyek *</Label>
-                    <Input id="location" placeholder="Kota/Provinsi" />
+                    <Input 
+                      id="location" 
+                      placeholder="Kota/Provinsi"
+                      value={formData.location}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
 
                   <div>
                     <Label htmlFor="building-type">Jenis Bangunan *</Label>
-                    <Select>
+                    <Select value={formData.buildingType} onValueChange={handleSelectChange}>
                       <SelectTrigger>
                         <SelectValue placeholder="Pilih jenis bangunan" />
                       </SelectTrigger>
@@ -82,8 +244,13 @@ export default function Kontak() {
                   </div>
 
                   <div>
-                    <Label htmlFor="roof-area">Perkiraan Luas Atap (m²)</Label>
-                    <Input id="roof-area" placeholder="Contoh: 2000" />
+                    <Label htmlFor="roofArea">Perkiraan Luas Atap (m²)</Label>
+                    <Input 
+                      id="roofArea" 
+                      placeholder="Contoh: 2000"
+                      value={formData.roofArea}
+                      onChange={handleInputChange}
+                    />
                   </div>
 
                   <div>
@@ -92,11 +259,18 @@ export default function Kontak() {
                       id="message" 
                       placeholder="Jelaskan kondisi gedung, masalah ventilasi yang dihadapi, atau kebutuhan khusus lainnya..."
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                     />
                   </div>
 
-                  <Button className="w-full" size="lg">
-                    Kirim Permintaan Konsultasi
+                  <Button 
+                    type="submit" 
+                    className="w-full" 
+                    size="lg"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Mengirim..." : "Kirim Permintaan Konsultasi"}
                   </Button>
                 </form>
               </CardContent>
