@@ -8,8 +8,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { MessageCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "@/components/ui/use-toast";
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   company: string;
@@ -33,7 +34,58 @@ export default function Kontak() {
     roofArea: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailJsConfig, setEmailJsConfig] = useState({
+    serviceId: '',
+    templateId: '',
+    publicKey: ''
+  });
+
+  // Initialize EmailJS configuration on component mount
+  useEffect(() => {
+    // Get environment variables - di Vite menggunakan import.meta.env
+    const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
+
+    console.log('Environment variables loaded:', {
+      serviceId: serviceId ? 'Found' : 'Missing',
+      templateId: templateId ? 'Found' : 'Missing',
+      publicKey: publicKey ? 'Found' : 'Missing'
+    });
+
+    // Check if all required environment variables are available
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS configuration missing. Please check your .env file has:');
+      console.error('VITE_EMAIL_SERVICE_ID');
+      console.error('VITE_EMAIL_TEMPLATE_ID');
+      console.error('VITE_EMAIL_PUBLIC_KEY');
+      return;
+    }
+
+    setEmailJsConfig({
+      serviceId,
+      templateId,
+      publicKey
+    });
+
+    // Initialize EmailJS
+    emailjs.init({
+      publicKey: publicKey,
+      blockHeadless: true,
+      blockList: {
+        list: ['foo@emailjs.com', 'bar@emailjs.com'],
+        watchVariable: 'userEmail',
+      },
+      limitRate: {
+        id: 'app',
+        throttle: 10000,
+      },
+    });
+
+    console.log('EmailJS initialized successfully');
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -93,23 +145,71 @@ export default function Kontak() {
     return true;
   };
 
+  const formatEmailData = () => {
+    const currentDate = new Date().toLocaleString('id-ID', {
+      timeZone: 'Asia/Jakarta',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    return {
+      from_company: formData.company,
+      from_name: formData.pic,
+      from_email: formData.email,
+      from_phone: formData.phone,
+      project_location: formData.location,
+      building_type: getBuildingTypeLabel(formData.buildingType),
+      roof_area: formData.roofArea || 'Tidak disebutkan',
+      customer_message: formData.message || 'Tidak ada pesan khusus',
+      submission_date: currentDate,
+      to_name: 'Tim C Vent',
+      to_email: import.meta.env.VITE_TO_EMAIL || 'cvent.ventilator@gmail.com',
+      subject: `KONSULTASI BARU: ${formData.company} - ${getBuildingTypeLabel(formData.buildingType)}`,
+      whatsapp_link: `https://wa.me/${formData.phone.replace(/\D/g, '')}`,
+      email_link: `mailto:${formData.email}`,
+      summary: `Permintaan konsultasi dari ${formData.company} untuk proyek ${getBuildingTypeLabel(formData.buildingType)} di ${formData.location}${formData.roofArea ? ` dengan luas atap ${formData.roofArea} m²` : ''}. Kontak: ${formData.pic} (${formData.phone}).`
+    };
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) return;
 
+    // Check if EmailJS is configured
+    if (!emailJsConfig.serviceId || !emailJsConfig.templateId || !emailJsConfig.publicKey) {
+      toast({
+        title: "Konfigurasi email belum lengkap",
+        description: "Mohon periksa konfigurasi environment variables",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const emailData = formatEmailData();
+      
+      console.log('Sending email with configuration:', {
+        serviceId: emailJsConfig.serviceId,
+        templateId: emailJsConfig.templateId,
+        // Don't log the full data for security
       });
+      
+      const response = await emailjs.send(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        emailData,
+        emailJsConfig.publicKey
+      );
 
-      if (response.ok) {
+      console.log('EmailJS Response:', response);
+
+      if (response.status === 200) {
         toast({
           title: "Berhasil terkirim!",
           description: "Permintaan konsultasi Anda telah terkirim. Tim kami akan menghubungi Anda segera.",
@@ -127,13 +227,22 @@ export default function Kontak() {
           message: ''
         });
       } else {
-        throw new Error('Failed to send email');
+        throw new Error(`EmailJS Error: ${response.status} - ${response.text}`);
       }
     } catch (error) {
       console.error('Error sending email:', error);
+      
+      let errorMessage = "Terjadi kesalahan saat mengirim permintaan. Silakan coba lagi atau hubungi kami langsung.";
+      
+      if (error instanceof Error) {
+        if (error.message.includes('configuration') || error.message.includes('Invalid')) {
+          errorMessage = "Konfigurasi email tidak valid. Silakan hubungi administrator.";
+        }
+      }
+      
       toast({
         title: "Gagal mengirim",
-        description: "Terjadi kesalahan saat mengirim permintaan. Silakan coba lagi atau hubungi kami langsung.",
+        description: errorMessage,
         variant: "destructive"
       });
     } finally {
@@ -268,10 +377,17 @@ export default function Kontak() {
                     type="submit" 
                     className="w-full" 
                     size="lg"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !emailJsConfig.serviceId}
                   >
                     {isSubmitting ? "Mengirim..." : "Kirim Permintaan Konsultasi"}
                   </Button>
+
+                  {!emailJsConfig.serviceId && (
+                    <div className="text-sm text-muted-foreground text-center bg-yellow-50 p-3 rounded-lg">
+                      <p className="font-medium text-yellow-800">Form sedang dalam penyiapan</p>
+                      <p className="text-yellow-700">Silakan hubungi kami langsung melalui WhatsApp di bawah ini.</p>
+                    </div>
+                  )}
                 </form>
               </CardContent>
             </Card>
