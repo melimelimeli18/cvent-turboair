@@ -8,13 +8,13 @@ export const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/88dd1ec6-51d4-4d75-8d4f-24a525b157a0.png" 
+                src="/lovable-uploads/cvent-logo-2.png" 
                 alt="C Vent Logo" 
                 className="h-12 w-auto"
               />
             </div>
             <p className="text-primary-foreground/70 mb-4">
-              Solusi ventilasi premium untuk gedung & industri sejak 1996
+              Solusi ventilasi premium untuk gedung & industri sejak 1997
             </p>
             <div className="space-y-2 text-primary-foreground/70 text-sm">
               <div className="flex items-center gap-2">

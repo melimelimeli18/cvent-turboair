@@ -11,36 +11,51 @@ export default function Index() {
       <Navigation isDark={false} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-100">
-        <div className="container mx-auto max-w-4xl text-center px-6">
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-7xl font-light text-neutral-900 leading-tight">
-              <span className="text-primary font-semibold">C Vent</span> – Turboair Ventilator 
-              <span className="block font-semibold">Premium Sejak 1997</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-light">
-              Solusi ventilasi alami tanpa listrik, bergaransi hingga 10 tahun
-            </p>
-            <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="text-lg px-12 py-4 rounded-full bg-primary text-white hover:bg-primary/90"
-                onClick={() => document.getElementById('products-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Lihat Produk →
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-12 py-4 rounded-full border-primary text-primary hover:bg-primary hover:text-white"
-                asChild
-              >
-                <Link to="/kontak">Hubungi Kami</Link>
-              </Button>
+      <section className="relative min-h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <img 
+          src="/lovable-uploads/landscape-cvent.png" 
+          alt="C Vent Warehouse" 
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/65"></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex items-center justify-center min-h-screen">
+          <div className="container mx-auto max-w-4xl text-center px-6">
+            <div className="space-y-8 text-white">
+              <h1 className="text-5xl md:text-7xl font-light leading-tight">
+                <span className="font-semibold text-[#16C751]">C Vent</span> – Turboair Ventilator 
+                <span className="block font-semibold">Premium Sejak 1997</span>
+              </h1>
+              <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light">
+                Solusi ventilasi alami tanpa listrik, bergaransi hingga 10 tahun
+              </p>
+              <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-12 py-4 rounded-full bg-primary text-white hover:bg-primary/90"
+                  onClick={() => document.getElementById('products-section')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Lihat Produk →
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-12 py-4 rounded-full border-primary text-[#16C751] hover:bg-primary hover:text-white bg-white/10 backdrop-blur-sm"
+                  asChild
+                >
+                  <Link to="/kontak">Hubungi Kami</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Kenapa Harus C Vent? */}
       <section className="py-20 px-6 bg-white">
